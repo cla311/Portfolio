@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Christopher Louie | Portfolio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.min.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/portfolio.min.css">
+    </head>
+
+    <body id="page-top" class="bg-white">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="index.html#page-top">Christopher Louie</a>
+                <button class="navbar-toggler navbar-toggler-right font-weight-bold rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#about">About</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Masthead -->
+        <header class="masthead bg-primary text-center">
+            <div class="container col-md-8 d-flex align-items-center flex-column">
+
+                <!-- Masthead Heading -->
+                <h1 class="masthead-heading2 text-secondary mb-3">NHL Stats Almanac: A PHP Web App</h1>
+
+                <!-- Masthead Subheading -->
+                <p class="masthead-subheading font-weight-light text-dark mb-0">Web Design - Front-End - Back-End</p>
+
+            </div>
+        </header>
+
+        <!-- Portfolio Item Section -->
+        <section class="page-section mb-0" id="about">
+            <div class="container">
+
+                <div class="row text-dark">
+                    <div class="col-md-8 mx-auto">
+
+                        <figure class="figure mb-5">
+                            <a class="text-decoration-none" data-toggle="modal" data-target="#logo" href="">
+                                <div class="modal-link-image">
+                                    <img class="figure-img img-thumbnail img-fluid d-block" src="img/portfolio/hockey.png" alt="">
+                                    <div class="modal-link-overlay w-100 h-100"></div>
+                                </div>
+                            </a>
+                            <figcaption class="figure-caption text-dark">The logo for the NHL Stats Almanac.</figcaption>
+                        </figure>
+
+                        <div class="mb-5">
+                            <h3 class="text-uppercase text-secondary mb-3">Project Details</h3>
+                            <p class="lead"><span class="font-weight-bold">Date:</span> October - December 2018</p>
+                            <p class="lead"><span class="font-weight-bold">Tools:</span> HTML5, CSS3, PHP, MySQLi, Ajax, XAMPP, phpMyAdmin</p>
+                            <p class="lead"><span class="font-weight-bold">Project Type:</span> School Project - Front-End/Back-End Web Design</p>
+                            <p class="lead"><span class="font-weight-bold">Team Members:</span> Ryan D.</p>
+                            <p class="lead"><span class="font-weight-bold">Role:</span> Programmer</p>
+                        </div>
+
+                        <div class="mb-5">
+                            <h3 class="text-uppercase text-secondary mb-3">Goal</h3>
+                            <p class="lead">In a team of two, create a PHP website that uses external data stored in a MySQLi database and provides additional features for registered users. We chose to create a NHL stats website using the NHL API.</p>
+                        </div>
+
+                        <div class="mb-5">
+                            <h3 class="text-uppercase text-secondary mb-3">Process</h3>
+                            <p class="lead">The project began with the project proposal, which was then followed by the Entity Relationship Diagram outlining the structure of the website and the database tables needed. Next we began designing the database and main pages of the website. I created the PHP API calls to the NHL API to retrieve the team and player stats, as well as the MySQLi queries to insert stats of new players into the database and to update the stats of existing players. I was also in charge of designing the Ajax filters and pagination for the search page, as well as creating the database tables and MySQLi queries to retrieve the stats.</p>
+                        </div>
+
+                        <figure class="figure mb-5">
+                            <a class="text-decoration-none" data-toggle="modal" data-target="#home" href="">
+                                <div class="modal-link-image">
+                                    <img class="figure-img img-thumbnail img-fluid d-block" src="img/portfolio/hockey_home.png" alt="">
+                                    <div class="modal-link-overlay w-100 h-100"></div>
+                                </div>
+                            </a>
+                            <figcaption class="figure-caption text-dark">The final version of the homepage of the NHL Stats Almanac with a list of user created fantasy teams and a featured players and teams list.</figcaption>
+                        </figure>
+
+                        <div class="mb-5">
+                            <h3 class="text-uppercase text-secondary mb-3">Challenges</h3>
+                            <p class="lead">One challenge I ran into was accessing the data from the NHL API and updating the database efficiently. This occurred because there was no official documentation from the NHL and the only documentation of the NHL API was from an ongoing documentation project created by Drew Hynes with community input on GitLab. I was able to decrease the database update time by updating only the player list in the search page, and then updating the team and player stats and details when the user views details of the specific player/team. This however made the search filters inaccurate as the stats would not be updated.</p>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6 mx-auto">
+                                <figure class="figure mb-5">
+                                    <a class="text-decoration-none" data-toggle="modal" data-target="#oldSearch" href="">
+                                        <div class="modal-link-image">
+                                            <img class="figure-img img-thumbnail img-fluid d-block" src="img/portfolio/hockey_oldSearch.png" alt="">
+                                            <div class="modal-link-overlay w-100 h-100"></div>
+                                        </div>
+                                    </a>
+                                    <figcaption class="figure-caption text-dark">The first iteration of the search page with the search query displayed for testing.</figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="col-md-6 mx-auto">
+                                <figure class="figure mb-5">
+                                    <a class="text-decoration-none" data-toggle="modal" data-target="#search" href="">
+                                        <div class="modal-link-image">
+                                            <img class="figure-img img-thumbnail img-fluid d-block" src="img/portfolio/hockey_search.png" alt="">
+                                            <div class="modal-link-overlay w-100 h-100"></div>
+                                        </div>
+                                    </a>
+                                    <figcaption class="figure-caption text-dark">The final version of the search page.</figcaption>
+                                </figure>
+                            </div>
+
+                        </div>
+
+                        <div class="mb-5">
+                            <p class="lead">Retrieving the data was difficult as data was spread out between separate API endpoints. I solved the data retrieval issue by finding out that loading the NHL teams list give the individual team IDs which could then be used to retrieve the team details, stats, and rosters. From the rosters, I was then able to retrieve the individual player IDs to get the player details and stats.</p>
+                        </div>
+
+                        <div class="mb-5">
+                            <h3 class="text-uppercase text-secondary mb-3">Results</h3>
+                            <p class="lead">The resulting website was noticeably faster and did not time out when updating the database. The pagination and filters on the search page resulted in smoother, cleaner search experience, allowing users to make more detailed searches, and large search results lists to be viewed more easily in paged results instead of one single list.</p>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6 mx-auto">
+                                <figure class="figure mb-5">
+                                    <a class="text-decoration-none" data-toggle="modal" data-target="#player" href="">
+                                        <div class="modal-link-image">
+                                            <img class="figure-img img-thumbnail img-fluid d-block" src="img/portfolio/hockey_player.png" alt="">
+                                            <div class="modal-link-overlay w-100 h-100"></div>
+                                        </div>
+                                    </a>
+                                    <figcaption class="figure-caption text-dark">The final version of the stats page for a player.</figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="col-md-6 mx-auto">
+                                <figure class="figure mb-5">
+                                    <a class="text-decoration-none" data-toggle="modal" data-target="#fantasy" href="">
+                                        <div class="modal-link-image">
+                                            <img class="figure-img img-thumbnail img-fluid d-block" src="img/portfolio/hockey_fantasy.png" alt="">
+                                            <div class="modal-link-overlay w-100 h-100"></div>
+                                        </div>
+                                    </a>
+                                    <figcaption class="figure-caption text-dark">The final version of the team roster for a user created fantasy team.</figcaption>
+                                </figure>
+                            </div>
+
+                        </div>
+
+                        <div class="mb-5">
+                            <h3 class="text-uppercase text-secondary mb-3">Reflection</h3>
+                            <p class="lead">Through this project, I learned how to use PHP, MySQLi, and Ajax. I also applied my web design and web programming skills, resulting in a simple to use NHL stats database web application. However, the database updating could have been better optimized to make the user experience smoother. In the future, I could solve this issue by setting up cron jobs to update the database periodically as the server is on. This would result in data not always being up-to-date, but would reduce loading times drastically.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Copyright Section -->
+        <footer class="footer py-4 text-center text-white">
+            <div class="container">
+                <small>Copyright &copy; Christopher Louie 2019</small>
+            </div>
+        </footer>
+
+        <!-- Scroll to Top Button -->
+        <div class="scroll-to-top position-fixed ">
+            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+
+        <!-- Modals -->
+        <div aria-hidden="true" aria-labelledby="logo" class="modal fade" id="logo" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header border-0">
+                        <button type="button" class="close" aria-label="Close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body mx-3 mb-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block" src="img/portfolio/hockey.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="home" class="modal fade" id="home" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header border-0">
+                        <button type="button" class="close" aria-label="Close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body mx-3 mb-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block" src="img/portfolio/hockey_home.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="oldSearch" class="modal fade" id="oldSearch" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header border-0">
+                        <button type="button" class="close" aria-label="Close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body mx-3 mb-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block" src="img/portfolio/hockey_oldSearch.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="search" class="modal fade" id="search" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header border-0">
+                        <button type="button" class="close" aria-label="Close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body mx-3 mb-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block" src="img/portfolio/hockey_searchFull.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="player" class="modal fade" id="player" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header border-0">
+                        <button type="button" class="close" aria-label="Close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body mx-3 mb-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block" src="img/portfolio/hockey_player.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="fantasy" class="modal fade" id="fantasy" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header border-0">
+                        <button type="button" class="close" aria-label="Close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body mx-3 mb3 p-0">
+                        <img class="img-thumbnail img-fluid d-block" src="img/portfolio/hockey_fantasy.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+
+        <script src="js/portfolio.min.js"></script>
+
+    </body>
+
+</html>
