@@ -2,13 +2,13 @@
 <html lang="en">
 
     <head>
-        <title>Christopher Louie | Portfolio</title>
+        <title>Christopher Louie | Portfolio | E-commerce Company Website Prototype</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/normalize.min.css">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/fd77361902.js" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="css/portfolio.min.css">
     </head>
@@ -18,7 +18,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="index.html#page-top">Christopher Louie</a>
+                <a class="navbar-brand js-scroll-trigger" href="index.html">Christopher Louie</a>
                 <button class="navbar-toggler navbar-toggler-right font-weight-bold rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fa fa-bars"></i>
@@ -59,11 +59,10 @@
                 <div class="row text-dark">
                     <div class="col-md-8 mx-auto">
 
-                        <figure class="figure mb-5">
-                            <a class="text-decoration-none" data-toggle="modal" data-target="#logo" href="">
-                                <div class="modal-link-image">
-                                    <img class="figure-img img-thumbnail img-fluid d-block" src="img/portfolio/newegg_ca.jpeg" alt="">
-                                    <div class="modal-link-overlay w-100 h-100"></div>
+                        <figure class="figure mb-5">x
+                            <a class="modal-image text-decoration-none" data-toggle="modal" data-target="#logo" href="">
+                                <div class="img-thumbnail">
+                                    <img class="figure-img img-fluid d-block" src="img/portfolio/newegg_ca.jpeg" alt="">
                                 </div>
                             </a>
                             <figcaption class="figure-caption text-dark">The logo for the website.</figcaption>
@@ -85,17 +84,18 @@
 
                         <div class="mb-5">
                             <h3 class="text-uppercase text-secondary mb-3">Process</h3>
-                            <p class="lead">The project began with the consolidation and finalization of the website's style, which could be based on the styles we created for the previous individual project. We settled on using the style I created with a couple minor changes. Next we began designing the main pages of the website. Using flexboxes, I created a responsive design that allowed the website to fit various device screen sizes. I also designed the checkout form, the product page image gallery, and the product details page.</p>
+                            <p class="lead">The project began with the consolidation and finalization of the website's style, which could be based on the styles we created for the previous individual project. We settled on using the style I created
+                                with a couple minor changes. Next we began designing the main pages of the website. Using flexboxes, I created a responsive design that allowed the website to fit various device screen sizes. I also designed the
+                                checkout form, the product page image gallery, and the product details page.</p>
                         </div>
 
                         <div class="row">
 
                             <div class="col-md-6 mx-auto">
                                 <figure class="figure mb-5">
-                                    <a class="text-decoration-none" data-toggle="modal" data-target="#oldCheckout" href="">
-                                        <div class="modal-link-image">
-                                            <img class="figure-img img-thumbnail img-fluid d-block" src="img/portfolio/newegg_oldCheckout.png" alt="">
-                                            <div class="modal-link-overlay w-100 h-100"></div>
+                                    <a class="modal-image text-decoration-none" data-toggle="modal" data-target="#oldCheckout" href="">
+                                        <div class="img-thumbnail">
+                                            <img class="figure-img img-fluid d-block" src="img/portfolio/newegg_oldCheckout.png" alt="">
                                         </div>
                                     </a>
                                     <figcaption class="figure-caption text-dark">An early iteration of the checkout page.</figcaption>
@@ -104,10 +104,9 @@
 
                             <div class="col-md-6 mx-auto">
                                 <figure class="figure mb-5">
-                                    <a class="text-decoration-none" data-toggle="modal" data-target="#checkout" href="">
-                                        <div class="modal-link-image">
-                                            <img class="figure-img img-thumbnail img-fluid d-block" src="img/portfolio/newegg_checkout.png" alt="">
-                                            <div class="modal-link-overlay w-100 h-100"></div>
+                                    <a class="modal-image text-decoration-none" data-toggle="modal" data-target="#checkout" href="">
+                                        <div class="img-thumbnail">
+                                            <img class="figure-img img-fluid d-block" src="img/portfolio/newegg_checkout.png" alt="">
                                         </div>
                                     </a>
                                     <figcaption class="figure-caption text-dark">The final version of the checkout page.</figcaption>
@@ -118,14 +117,15 @@
 
                         <div class="mb-5">
                             <h3 class="text-uppercase text-secondary mb-3">Challenges</h3>
-                            <p class="lead">One challenge I ran into was designing the flexboxes so they would fit the way we wanted on different screen sizes, especially for the product page image gallery. Initially, the image gallery would scale responsively between certain screen sizes, but would then snap to abruptly to the next style when the screen size became smaller or bigger than the initial range. I eventually solved this problem by adjusting the flexbox style starting from the largest screen size the website would support, which made sure the smaller styles would not break the larger ones.</p>
+                            <p class="lead">One challenge I ran into was designing the flexboxes so they would fit the way we wanted on different screen sizes, especially for the product page image gallery. Initially, the image gallery would scale
+                                responsively between certain screen sizes, but would then snap to abruptly to the next style when the screen size became smaller or bigger than the initial range. I eventually solved this problem by adjusting the
+                                flexbox style starting from the largest screen size the website would support, which made sure the smaller styles would not break the larger ones.</p>
                         </div>
 
                         <figure class="figure mb-5">
-                            <a class="text-decoration-none" data-toggle="modal" data-target="#products" href="">
-                                <div class="modal-link-image">
-                                    <img class="figure-img img-thumbnail img-fluid d-block" src="img/portfolio/newegg_products.png" alt="">
-                                    <div class="modal-link-overlay w-100 h-100"></div>
+                            <a class="modal-image text-decoration-none" data-toggle="modal" data-target="#products" href="">
+                                <div class="img-thumbnail">
+                                    <img class="figure-img img-fluid d-block" src="img/portfolio/newegg_products.png" alt="">
                                 </div>
                             </a>
                             <figcaption class="figure-caption text-dark">The final version of the products page with the image gallery.</figcaption>
@@ -133,17 +133,17 @@
 
                         <div class="mb-5">
                             <h3 class="text-uppercase text-secondary mb-3">Results</h3>
-                            <p class="lead">The resulting website had a clean and simple visual style that fit well on various screen sizes. The flow of the website resulted in a smooth navigation experience, as each step in the purchasing process (viewing products, adding to cart, and checking out) is spread out between 1-2 pages and requires minimal clicks to complete (not including entering checkout details).</p>
+                            <p class="lead">The resulting website had a clean and simple visual style that fit well on various screen sizes. The flow of the website resulted in a smooth navigation experience, as each step in the purchasing process
+                                (viewing products, adding to cart, and checking out) is spread out between 1-2 pages and requires minimal clicks to complete (not including entering checkout details).</p>
                         </div>
 
                         <div class="row">
 
                             <div class="col-md-6 mx-auto">
                                 <figure class="figure mb-5">
-                                    <a class="text-decoration-none" data-toggle="modal" data-target="#home" href="">
-                                        <div class="modal-link-image">
-                                            <img class="figure-img img-thumbnail img-fluid d-block" src="img/portfolio/newegg_home.png" alt="">
-                                            <div class="modal-link-overlay w-100 h-100"></div>
+                                    <a class="modal-image text-decoration-none" data-toggle="modal" data-target="#home" href="">
+                                        <div class="img-thumbnail">
+                                            <img class="figure-img img-fluid d-block" src="img/portfolio/newegg_home.png" alt="">
                                         </div>
                                     </a>
                                     <figcaption class="figure-caption text-dark">The final version of the homepage with the featured sale banner and featured products showcase.</figcaption>
@@ -152,10 +152,9 @@
 
                             <div class="col-md-6 mx-auto">
                                 <figure class="figure mb-5">
-                                    <a class="text-decoration-none" data-toggle="modal" data-target="#detail" href="">
-                                        <div class="modal-link-image">
-                                            <img class="figure-img img-thumbnail img-fluid d-block" src="img/portfolio/newegg_detail.png" alt="">
-                                            <div class="modal-link-overlay w-100 h-100"></div>
+                                    <a class="modal-image text-decoration-none" data-toggle="modal" data-target="#detail" href="">
+                                        <div class="img-thumbnail">
+                                            <img class="figure-img img-fluid d-block" src="img/portfolio/newegg_detail.png" alt="">
                                         </div>
                                     </a>
                                     <figcaption class="figure-caption text-dark">The final version of the example product details page.</figcaption>
@@ -166,7 +165,9 @@
 
                         <div class="mb-5">
                             <h3 class="text-uppercase text-secondary mb-3">Reflection</h3>
-                            <p class="lead">Through this project, I gained a better understanding of how to create a smooth website flow, and how to design flexboxes to better fit different screen sizes. This project also helped me further develop my skills in using JavaScript and using flexboxes. One thing that could be changed in the future is the layout of the website. Currently the main body content fills the entire window width, which makes it too wide on larger screens. In the future, I would change the width main body content's flexboxes and make them smaller, and adjust the breakpoints and wrapping accordingly.</p>
+                            <p class="lead">Through this project, I gained a better understanding of how to create a smooth website flow, and how to design flexboxes to better fit different screen sizes. This project also helped me further develop my
+                                skills in using JavaScript and using flexboxes. One thing that could be changed in the future is the layout of the website. Currently the main body content fills the entire window width, which makes it too wide on
+                                larger screens. In the future, I would change the width main body content's flexboxes and make them smaller, and adjust the breakpoints and wrapping accordingly.</p>
                         </div>
 
                     </div>
@@ -183,9 +184,9 @@
         </footer>
 
         <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-        <div class="scroll-to-top position-fixed ">
-            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
-                <i class="fa fa-chevron-up"></i>
+        <div class="scroll-to-top to-top position-fixed align-items-center rounded">
+            <a class="text-center text-white m-auto">
+                <i class="fas fa-chevron-up"></i>
             </a>
         </div>
 
@@ -292,11 +293,10 @@
             </div>
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 
         <script src="js/portfolio.min.js"></script>
 

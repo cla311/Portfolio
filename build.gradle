@@ -1,0 +1,39 @@
+plugins {
+    id "org.springframework.boot"  version "+"
+    id "java"
+    id "io.freefair.lombok" version "+"
+}
+
+apply plugin: "io.spring.dependency-management"
+
+group = "com.cla311"
+version = "1.0"
+sourceCompatibility = "16"
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-starter-jdbc"
+    implementation "org.springframework.boot:spring-boot-starter-thymeleaf"
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+    implementation "org.postgresql:postgresql:+"
+    implementation "org.webjars:jquery:+"
+    implementation "org.webjars:jquery-ui:+"
+    implementation "org.webjars:bootstrap:+"
+    implementation "org.webjars:webjars-locator:+"
+
+    implementation 'javax:javaee-api:+'
+
+    testImplementation "junit:junit:+"
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
+}
+
+gradle.projectsEvaluated {
+   tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+    }
+}
