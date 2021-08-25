@@ -1,166 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html th:replace="~{fragments/layout :: layout(~{::title/text()}, ~{::link}, ~{::#content})}">
 
     <head>
         <title>Christopher Louie | Portfolio</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/normalize.min.css">
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/fd77361902.js" crossorigin="anonymous"></script>
-
-        <link rel="stylesheet" href="css/portfolio.min.css">
     </head>
 
-    <body id="page-top" class="bg-white">
+    <body>
+        <div id="content" th:remove="tag">
+            <!-- Masthead -->
+            <header class="masthead bg-primary text-center">
+                <div class="container col-md-8 d-flex align-items-center flex-column">
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand to-top">Christopher Louie</a>
-                <button class="navbar-toggler navbar-toggler-right font-weight-bold rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fa fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
-                        </li>
-                    </ul>
+                    <!-- Masthead Avatar Image -->
+                    <img class="masthead-avatar mb-5" th:src="@{/img/logo.svg}" alt="Chris Louie logo">
+
+                    <!-- Masthead Heading -->
+                    <h1 class="masthead-heading text-secondary mb-3">Christopher Louie</h1>
+
+                    <!-- Masthead Subheading -->
+                    <p class="masthead-subheading font-weight-light text-dark mb-0">Web Designer - Programmer - Game Designer</p>
+
                 </div>
-            </div>
-        </nav>
+            </header>
 
-        <!-- Masthead -->
-        <header class="masthead bg-primary text-center">
-            <div class="container col-md-8 d-flex align-items-center flex-column">
+            <!-- Main Content -->
+            <main>
+                <!-- Portfolio Section -->
+                <section class="page-section portfolio" id="portfolio">
+                    <div class="container">
 
-                <!-- Masthead Avatar Image -->
-                <img class="masthead-avatar mb-5" src="img/logo.svg" alt="">
+                        <!-- Portfolio Section Heading -->
+                        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">Portfolio</h2>
 
-                <!-- Masthead Heading -->
-                <h1 class="masthead-heading text-secondary mb-3">Christopher Louie</h1>
+                        <div class="filterGroup btn-group mb-3">
+                            <button class="filter btn btn-outline-secondary shadow-none active" id="all" data-filter="all"> Show All</button>
+                            <button class="filter btn btn-outline-secondary shadow-none" data-filter="web-design"> Web Design</button>
+                            <button class="filter btn btn-outline-secondary shadow-none" data-filter="front-end"> Front-End</button>
+                            <button class="filter btn btn-outline-secondary shadow-none" data-filter="back-end"> Back-end</button>
+                        </div>
 
-                <!-- Masthead Subheading -->
-                <p class="masthead-subheading font-weight-light text-dark mb-0">Programmer - Web Designer - Game Designer</p>
-
-            </div>
-        </header>
-
-        <!-- Portfolio Section -->
-        <section class="page-section portfolio" id="portfolio">
-            <div class="container">
-
-                <!-- Portfolio Section Heading -->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">Portfolio</h2>
-
-                <div class="filterGroup btn-group mb-3">
-                    <button class="filter btn btn-outline-secondary active" id="all" data-filter="all"> Show All</button>
-                    <button class="filter btn btn-outline-secondary" data-filter="web-design"> Web Design</button>
-                    <button class="filter btn btn-outline-secondary" data-filter="front-end"> Front-End</button>
-                    <button class="filter btn btn-outline-secondary" data-filter="back-end"> Back-end</button>
-                </div>
-
-                <!-- Portfolio Grid Items -->
-                <div class="row">
-
-                    <!-- Portfolio Item 1 -->
-                    <div class="col-md-6 portfolio-column web-design front-end">
-                        <a class="portfolio-item text-decoration-none mx-auto" href="newegg.html">
-                            <img class="img-fluid d-block p-4" src="img/portfolio/newegg_ca.jpeg" alt="">
-                            <div class="portfolio-item-caption text-center">
-                                <h4 class="text-secondary mb-3">E-commerce Company Website Prototype</h4>
-                                <h5 class="font-weight-light text-dark mb-0">Web Design - Front-End</h5>
+                        <!-- Portfolio Grid Items -->
+                        <div class="row row-cols-1 row-cols-md-3" th:remove="all-but-first">
+                            <div th:each="project : ${project_list}" class="col portfolio-column web-design front-end" th:classappend="${project.getCssTags()}">
+                                <a class="portfolio-item text-decoration-none mx-auto" th:href="@{|/projects/${project.getLink()}|}">
+                                    <img class="img-fluid d-block p-4" th:src="@{|/img/portfolio/${project.getImage()}|}" alt="">
+                                    <div class="portfolio-item-caption text-center">
+                                        <h4 class="text-secondary mb-3" th:text="${project.getTitle()}">E-commerce Company Website Prototype</h4>
+                                        <h5 class="font-weight-light text-dark mb-0" th:text="${project.getTags()}">Web Design - Front-End</h5>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
 
-                    <!-- Portfolio Item 2 -->
-                    <div class="col-md-6 portfolio-column web-design front-end back-end">
-                        <a class="portfolio-item text-decoration-none mx-auto" href="hockey.html">
-                            <img class="img-fluid d-block p-4" src="img/portfolio/hockey.png" alt="">
-                            <div class="portfolio-item-caption text-center">
-                                <h4 class="text-secondary mb-3">NHL Stats Almanac: A PHP & MySQli Web App</h4>
-                                <h5 class="font-weight-light text-dark mb-0">Web Design - Front-End - Back-End</h5>
+                            <!-- Portfolio Item 1 -->
+                            <div class="col portfolio-column web-design front-end">
+                                <a class="portfolio-item text-decoration-none mx-auto" href="#">
+                                    <img class="img-fluid d-block p-4" src="img/portfolio/newegg/newegg_ca.jpeg" alt="">
+                                    <div class="portfolio-item-caption text-center">
+                                        <h4 class="text-secondary mb-3">E-commerce Company Website Prototype</h4>
+                                        <h5 class="font-weight-light text-dark mb-0">Web Design - Front-End</h5>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
+
+                            <!-- Portfolio Item 2 -->
+                            <div class="col portfolio-column web-design front-end back-end">
+                                <a class="portfolio-item text-decoration-none mx-auto" href="#">
+                                    <img class="img-fluid d-block p-4" src="/img/portfolio/hockey/hockey.png" alt="">
+                                    <div class="portfolio-item-caption text-center">
+                                        <h4 class="text-secondary mb-3">NHL Stats Almanac: A PHP & MySQli Web App</h4>
+                                        <h5 class="font-weight-light text-dark mb-0">Web Design - Front-End - Back-End</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.row -->
                     </div>
+                </section>
 
-                </div>
-                <!-- /.row -->
+                <!-- About Section -->
+                <section class="page-section bg-primary mb-0" id="about">
+                    <div class="container">
 
-            </div>
-        </section>
+                        <!-- About Section Heading -->
+                        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">About</h2>
 
-        <!-- About Section -->
-        <section class="page-section bg-primary mb-0" id="about">
-            <div class="container">
+                        <!-- About Section Content -->
+                        <div class="row text-dark">
+                            <div class="col-md-8 mx-auto">
+                                <p class="lead">I am Christopher Louie, an Interactive Arts and Technology student minoring in Computer Science with a background in interactive tech, web design, data analysis, and game design. I am especially
+                                    interested
+                                    in
+                                    web design, data anylisis, programming, and UI/UX design. I am particularly skilled with HTML5, CSS3, JS, Java, Spring Boot, Photoshop, and Illustrator.</p>
 
-                <!-- About Section Heading -->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">About</h2>
+                                <p class="lead">My work focuses on finding creative, interesting ways of using data to enhance functionality and visual design. In my spare time, I enjoy playing video games, music production, playing the piano, and
+                                    watching
+                                    sports.
+                                </p>
+                            </div>
+                        </div>
 
-                <!-- About Section Content -->
-                <div class="row text-dark">
-                    <div class="col-md-8 mx-auto">
-                        <p class="lead">I am Christopher Louie, a fourth year Interactive Arts and Technology student with a background in interactive technology, game design, and web design. I am especially interested in visual design and
-                            programming.</p>
-
-                        <p class="lead">My work focuses on finding creative, interesting ways that function and visual design can be combined. In my spare time, I enjoy playing video games, music production, playing the piano, and watching sports.
-                        </p>
                     </div>
-                </div>
+                </section>
 
-            </div>
-        </section>
+                <!-- Contact Section -->
+                <section class="page-section mb-0" id="contact">
+                    <div class="container">
 
-        <!-- Contact Section -->
-        <section class="page-section mb-0" id="contact">
-            <div class="container">
+                        <!-- Contact Section Heading -->
+                        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">Contact</h2>
 
-                <!-- Contact Section Heading -->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">Contact</h2>
-
-                <!-- Contact Section Content -->
-                <div class="row text-dark text-center">
-                    <div class="col-md-8 mx-auto">
-                        <p class="lead">cla311@sfu.ca</p>
-                        <p class="lead">604-367-3928</p>
-                        <p class="lead"><a class="text-secondary" target="_blank" href="/Resume.pdf">Resume</a></p>
+                        <!-- Contact Section Content -->
+                        <div class="row text-dark text-center">
+                            <div class="col-md-8 mx-auto">
+                                <p class="lead">cla311@sfu.ca</p>
+                                <p class="lead">604-367-3928</p>
+                                <p class="lead"><a class="text-secondary" target="_blank" href="/Resume.pdf">Resume</a></p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Copyright Section -->
-        <footer class="footer py-4 text-center text-white">
-            <div class="container">
-                <small>Copyright &copy; Christopher Louie 2019</small>
-            </div>
-        </footer>
-
-        <!-- Scroll to Top Button -->
-        <div class="scroll-to-top to-top position-fixed align-items-center rounded">
-            <a class="text-center text-white m-auto">
-                <i class="fas fa-chevron-up"></i>
-            </a>
+                </section>
+            </main>
         </div>
-
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-
-        <script src="js/portfolio.min.js"></script>
-
     </body>
 
 </html>

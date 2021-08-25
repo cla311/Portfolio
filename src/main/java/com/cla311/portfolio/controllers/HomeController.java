@@ -14,6 +14,8 @@ import com.cla311.portfolio.services.ProjectService;
 	@Autowired private ProjectService projectService;
 
 	@GetMapping("/") public String index(Model model) {
+		model.addAttribute("project_list", projectService.getProjects());
+
 		return "index";
 	}
 }

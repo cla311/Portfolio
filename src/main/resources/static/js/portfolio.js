@@ -3,30 +3,25 @@
 var navOffset = 72;
 
 $(function() {
+    // Auto scroll to section if page was loaded with an anchor link in the url
     autoScroll();
+    // Scroll to corisponding section when a navbar link is clicked
+    $('.js-scroll-trigger').each(function() {
+        $(this).click(function() {
+            scrollToSection($(this));
+        });
+    });
+
+    // Show scroll to top button if page is not at top
     showTopButton();
-
-    // Smooth scrolling using jQuery easing
-    $('.js-scroll-trigger').click(function() {
-        var target = this.hash;
-        changeHash(target);
-        if (target.length) {
-            $('html, body').animate({
-                scrollTop: ($(target).offset().top - navOffset)
-            }, 500, "easeInOutExpo");
-        }
-    });
-
-    $('.to-top').click(function() {
-        removeHash();
-        $('html, body').animate({
-            scrollTop: 0
-        }, 500, "easeInOutExpo");
-    });
-
     // Scroll to top button appear
     $(document).scroll(function() {
         showTopButton();
+    });
+
+    // Scroll to top when the button is clicked
+    $('.to-top').click(function() {
+        toTop();
     });
 
     // Closes responsive menu when a scroll trigger link is clicked
@@ -43,7 +38,9 @@ $(function() {
     // Collapse now if page is not at top
     navbarCollapse();
     // Collapse the navbar when page is scrolled
-    $(window).scroll(navbarCollapse());
+    $(window).scroll(function() {
+        navbarCollapse();
+    });
 
 
     var projects = $('.portfolio-column'),
@@ -51,63 +48,61 @@ $(function() {
 
     filters.each(function() {
         $(this).click(function() {
-            var value = $(this).data('filter');
-
-            if (value === "all") {
-                filterAll(filters, projects);
-                return false;
-            } else {
-                $("#all").removeClass('active');
-            }
-
-            if ($(this).hasClass('active')) {
-                $(this).removeClass('active');
-            } else {
-                $(this).addClass('active');
-            }
-
-            var checkedClasses = filters.filter('.active').toArray().map(function(btn) {
-                return $(btn).data('filter');
-            });
-
-            if (checkedClasses.length === 0) {
-                filterAll(filters, projects);
-                return false;
-            }
-
-            selector = '.' + checkedClasses.join(', .'),
-                show = projects.filter(selector);
-            projects.not(show).fadeOut('3000');
-            show.fadeIn('3000');
+            filterProjects($(this), filters, projects);
         });
     });
 });
 
 function autoScroll() {
-    // set a variable for the anchor link which is the location.hash
-    var anchorLink = $(window.location.hash);
-    // test to see if the link is a anchor link, if not the length will have no value, this is done to avoid js errors on non anchor links
-    if (anchorLink.length) {
-        // fire the animation from the top of the page to the anchor link offsetting by the fixed elements height, the number is the speed of the animation
-        // $("html, body").animate({
-        //     scrollTop: (anchorLink.offset().top - navOffset)
-        // }, 500, "easeInOutExpo");
-        $("html, body").scrollTop(anchorLink.offset().top - navOffset);
+    // Set a variable for the anchor link which is the location.hash
+    var anchorLink = window.location.hash;
+    // Test to see if the link is a anchor link, if not the length will have no value, this is done to avoid js errors on non anchor links
+    if (anchorLink.length > 0) {
+        // Fire the animation from the top of the page to the anchor link offsetting by the fixed elements height, the number is the speed of the animation
+        // Smooth scrolling using jQuery easing
+        $("html, body").animate({
+            scrollTop: (anchorLink.offset().top - navOffset)
+        }, 500, "easeInOutExpo");
+        // $("html, body").scrollTop(anchorLink.offset().top - navOffset);
+    } else {
+        window.scrollTo(0, 0);
     }
 };
 
 function changeHash(hashVal) {
-    history.pushState("", document.title, window.location.pathname +
-        window.location.search + hashVal);
+    var newUrl = window.location.href.split("#")[0] + hashVal;
+    if (window.location.href != newUrl) {
+        history.pushState("", newUrl);
+    }
 };
 
 function removeHash() {
-    history.pushState("", document.title, window.location.pathname +
-        window.location.search);
+    var newUrl = window.location.href.split("#")[0];
+    if (window.location.href != newUrl) {
+        history.pushState("", newUrl);
+    }
+};
+
+function scrollToSection(section) {
+    var target = section.prop("hash");
+    changeHash(target);
+    if (target.length > 0) {
+        // Smooth scrolling using jQuery easing
+        $('html, body').animate({
+            scrollTop: ($(target).offset().top - navOffset)
+        }, 500, "easeInOutExpo");
+    }
+};
+
+function toTop() {
+    removeHash();
+    $('html, body').animate({
+        scrollTop: 0
+    }, 500, "easeInOutExpo");
 };
 
 function showTopButton() {
-    var scrollDistance = $(this).scrollTop();
+    var scrollDistance = $(document).scrollTop();
     if (scrollDistance > 100) {
         $('.scroll-to-top').fadeIn().css("display", "flex");
     } else {
@@ -128,4 +123,35 @@ function filterAll(filters, projects) {
         $('#all').addClass('active');
         projects.fadeIn('3000');
     }
+}
+
+function filterProjects(currFilter, filters, projects) {
+    var value = currFilter.data('filter');
+
+    if (value === "all") {
+        filterAll(filters, projects);
+        return false;
+    } else {
+        $("#all").removeClass('active');
+    }
+
+    if (currFilter.hasClass('active')) {
+        currFilter.removeClass('active');
+    } else {
+        currFilter.addClass('active');
+    }
+
+    var checkedClasses = filters.filter('.active').toArray().map(function(btn) {
+        return $(btn).data('filter');
+    });
+
+    if (checkedClasses.length === 0) {
+        filterAll(filters, projects);
+        return false;
+    }
+
+    selector = '.' + checkedClasses.join(', .'),
+        show = projects.filter(selector);
+    projects.not(show).fadeOut('3000');
+    show.fadeIn('3000');
 }

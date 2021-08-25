@@ -17,8 +17,9 @@ import com.cla311.portfolio.repositories.ProjectRepository;
 	@Autowired private ProjectRepository projectRepository;
 
 	public List<Project> getProjects() {
-		Sort sort = Sort.by(Direction.DESC, "end_date", "start_date");
+		Sort sort = Sort.by(Direction.DESC, "endDate", "startDate");
 		List<Project> projects = projectRepository.findAll(sort);
+		// projects.forEach(project -> System.out.println(project.toString()));
 
 		return projects;
 	}
