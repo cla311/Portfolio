@@ -1,14 +1,21 @@
 "use strict";
 
-var navOffset = 72;
+var page = $("html, body");
 
 $(function() {
     // Auto scroll to section if page was loaded with an anchor link in the url
     autoScroll();
     // Scroll to corisponding section when a navbar link is clicked
     $('.js-scroll-trigger').each(function() {
-        $(this).click(function() {
-            scrollToSection($(this));
+        var menuItem = $(this);
+        menuItem.click(function() {
+            navbarCollapse();
+            if ($(".navbar-toggler").css("display") == "none") {
+                var navOffset = getNavOffset();
+                scrollToSection(menuItem, navOffset);
+            } else {
+                scrollToSection(menuItem, 0);
+            }
         });
     });
 
@@ -24,11 +31,6 @@ $(function() {
         toTop();
     });
 
-    // Closes responsive menu when a scroll trigger link is clicked
-    $('.js-scroll-trigger, .to-top').click(function() {
-        $('.navbar-collapse').collapse('hide');
-    });
-
     // Activate scrollspy to add active class to navbar items on scroll
     $('body').scrollspy({
         target: '#mainNav',
@@ -42,9 +44,8 @@ $(function() {
         navbarCollapse();
     });
 
-
-    var projects = $('.portfolio-column'),
-        filters = $('.filter');
+    var projects = $(".portfolio-column"),
+        filters = $(".filter");
 
     filters.each(function() {
         $(this).click(function() {
@@ -53,19 +54,29 @@ $(function() {
     });
 });
 
+// Collapse Navbar
+function navbarCollapse() {
+    $('#navbarResponsive').collapse('hide');
+};
+
+function getNavOffset() {
+    var offset = $("#mainNav").outerHeight();
+    return offset - 32;
+}
+
 function autoScroll() {
+    var navOffset = getNavOffset();
+
     // Set a variable for the anchor link which is the location.hash
     var anchorLink = window.location.hash;
     // Test to see if the link is a anchor link, if not the length will have no value, this is done to avoid js errors on non anchor links
     if (anchorLink.length > 0) {
         // Fire the animation from the top of the page to the anchor link offsetting by the fixed elements height, the number is the speed of the animation
         // Smooth scrolling using jQuery easing
-        $("html, body").animate({
-            scrollTop: (anchorLink.offset().top - navOffset)
+        page.animate({
+            scrollTop: ($(anchorLink).offset().top - navOffset)
         }, 500, "easeInOutExpo");
-        // $("html, body").scrollTop(anchorLink.offset().top - navOffset);
-    } else {
-        window.scrollTo(0, 0);
+        // $("html, body").scrollTop($(anchorLink).offset().top - navOffset);
     }
 };
 
@@ -83,20 +94,22 @@ function removeHash() {
     }
 };
 
-function scrollToSection(section) {
+function scrollToSection(section, navOffset) {
     var target = section.prop("hash");
     changeHash(target);
     if (target.length > 0) {
         // Smooth scrolling using jQuery easing
-        $('html, body').animate({
+        page.animate({
             scrollTop: ($(target).offset().top - navOffset)
         }, 500, "easeInOutExpo");
     }
+
 };
 
 function toTop() {
+    navbarCollapse();
     removeHash();
-    $('html, body').animate({
+    $('html, body').stop().animate({
         scrollTop: 0
     }, 500, "easeInOutExpo");
 };
@@ -107,13 +120,6 @@ function showTopButton() {
         $('.scroll-to-top').fadeIn().css("display", "flex");
     } else {
         $('.scroll-to-top').fadeOut();
-    }
-};
-
-// Collapse Navbar
-function navbarCollapse() {
-    if ($("#mainNav").offset().top > 100) {
-        $('.navbar-collapse').collapse('hide');
     }
 };
 
