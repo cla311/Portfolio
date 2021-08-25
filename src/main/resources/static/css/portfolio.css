@@ -2,7 +2,7 @@
 
 :root {
     --primary-color: #E7F1F2;
-    --secondary-color: #70A6D2;
+    --secondary-color: #70A5D1;
     --dark-color: #606161;
 }
 
@@ -134,6 +134,13 @@ body {
 #mainNav .navbar-toggler {
     font-size: 80%;
     padding: 0.8rem;
+    color: #fff;
+    border-color: #fff;
+}
+
+#mainNav .navbar-toggler:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 
 .masthead {
