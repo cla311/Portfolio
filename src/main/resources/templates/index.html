@@ -32,11 +32,18 @@
                         <!-- Portfolio Section Heading -->
                         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">Portfolio</h2>
 
-                        <div class="filterGroup btn-group mb-3">
-                            <button class="filter btn btn-outline-secondary shadow-none active" id="all" data-filter="all"> Show All</button>
-                            <button class="filter btn btn-outline-secondary shadow-none" data-filter="web-design"> Web Design</button>
-                            <button class="filter btn btn-outline-secondary shadow-none" data-filter="front-end"> Front-End</button>
-                            <button class="filter btn btn-outline-secondary shadow-none" data-filter="back-end"> Back-end</button>
+                        <div class="filterGroup mb-3">
+                            <input type="checkbox" class="filter btn-check" id="all" autocomplete="off" data-filter="all" checked>
+                            <label class="btn btn-outline-secondary shadow-none" for="all">Show All</label>
+
+                            <input type="checkbox" class="filter btn-check" id="web-design" autocomplete="off" data-filter="web-design">
+                            <label class="btn btn-outline-secondary shadow-none" for="web-design">Web Design</label>
+
+                            <input type="checkbox" class="filter btn-check" id="front-end" autocomplete="off" data-filter="front-end">
+                            <label class="btn btn-outline-secondary shadow-none" for="front-end">Front-End</label>
+
+                            <input type="checkbox" class="filter btn-check" id="back-end" autocomplete="off" data-filter="back-end">
+                            <label class="btn btn-outline-secondary shadow-none" for="back-end">Back-end</label>
                         </div>
 
                         <!-- Portfolio Grid Items -->

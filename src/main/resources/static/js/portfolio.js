@@ -44,8 +44,8 @@ $(function() {
         navbarCollapse();
     });
 
-    var projects = $(".portfolio-column"),
-        filters = $(".filter");
+    var filters = $(".filter"),
+        projects = $(".portfolio-column");
 
     filters.each(function() {
         $(this).click(function() {
@@ -65,10 +65,10 @@ function getNavOffset() {
 }
 
 function autoScroll() {
-    var navOffset = getNavOffset();
+    var navOffset = getNavOffset(),
+        // Set a variable for the anchor link which is the location.hash
+        anchorLink = window.location.hash;
 
-    // Set a variable for the anchor link which is the location.hash
-    var anchorLink = window.location.hash;
     // Test to see if the link is a anchor link, if not the length will have no value, this is done to avoid js errors on non anchor links
     if (anchorLink.length > 0) {
         // Fire the animation from the top of the page to the anchor link offsetting by the fixed elements height, the number is the speed of the animation
@@ -103,7 +103,6 @@ function scrollToSection(section, navOffset) {
             scrollTop: ($(target).offset().top - navOffset)
         }, 500, "easeInOutExpo");
     }
-
 };
 
 function toTop() {
@@ -124,31 +123,28 @@ function showTopButton() {
 };
 
 function filterAll(filters, projects) {
-    if (!$('#all').hasClass('active')) {
-        filters.removeClass('active');
-        $('#all').addClass('active');
-        projects.fadeIn('3000');
-    }
+    var all = $('#all');
+    filters.prop("checked", false);
+    all.prop("checked", true);
+    projects.fadeIn('3000');
 }
 
 function filterProjects(currFilter, filters, projects) {
-    var value = currFilter.data('filter');
+    var all = $('#all'),
+        value = currFilter.data('filter'),
+        checkedClasses = [];
 
     if (value === "all") {
         filterAll(filters, projects);
         return false;
     } else {
-        $("#all").removeClass('active');
+        all.prop("checked", false);
     }
 
-    if (currFilter.hasClass('active')) {
-        currFilter.removeClass('active');
-    } else {
-        currFilter.addClass('active');
-    }
-
-    var checkedClasses = filters.filter('.active').toArray().map(function(btn) {
-        return $(btn).data('filter');
+    filters.each(function(btn) {
+        if ($(this).prop('checked') == true) {
+            checkedClasses.push($(this).data('filter'));
+        }
     });
 
     if (checkedClasses.length === 0) {
