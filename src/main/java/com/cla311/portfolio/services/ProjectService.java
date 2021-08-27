@@ -23,4 +23,9 @@ import com.cla311.portfolio.repositories.ProjectRepository;
 
 		return projects;
 	}
+
+	public Project getProjectByID(String link) {
+		return projectRepository.findById(link).orElseThrow(
+			() -> new IllegalArgumentException("No Project with ID " + link));
+	}
 }

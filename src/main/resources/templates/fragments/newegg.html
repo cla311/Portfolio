@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+        <!-- Main Content -->
+        <main th:fragment="newegg">
+            <!-- Project Section -->
+            <section class="page-section mb-0" id="project">
+                <div class="container">
+                    <div class="row text-dark">
+                        <div class="col-md-8 mx-auto">
+                            <figure class="figure mb-5">
+                                <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#logo" href="">
+                                    <div class="img-thumbnail">
+                                        <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/newegg/newegg_ca.jpeg}" alt="">
+                                    </div>
+                                </a>
+                                <figcaption class="figure-caption text-dark">The logo for the website.</figcaption>
+                            </figure>
+
+                            <div class="mb-5">
+                                <h3 class="text-uppercase text-secondary mb-3">Project Details</h3>
+                                <p class="lead"><span class="font-weight-bold">Date:</span> February - March 2019</p>
+                                <p class="lead"><span class="font-weight-bold">Tools:</span> HTML5, CSS3, JavaScript</p>
+                                <p class="lead"><span class="font-weight-bold">Project Type:</span> School Project - Front-End Web Design</p>
+                                <p class="lead"><span class="font-weight-bold">Team Members:</span> Alex S.</p>
+                                <p class="lead"><span class="font-weight-bold">Role:</span> Programmer, UI Designer</p>
+                            </div>
+
+                            <div class="mb-5">
+                                <h3 class="text-uppercase text-secondary mb-3">Goal</h3>
+                                <p class="lead">In a team of two, create a prototype responsive e-commerce company website using HTML and CSS. The company we chose was Newegg Canada, a tech-focused e-retailer.</p>
+                            </div>
+
+                            <div class="mb-5">
+                                <h3 class="text-uppercase text-secondary mb-3">Process</h3>
+                                <p class="lead">The project began with the consolidation and finalization of the website's style, which could be based on the styles we created for the previous individual project. We settled on using the style I
+                                    created
+                                    with a couple minor changes. Next we began designing the main pages of the website. Using flexboxes, I created a responsive design that allowed the website to fit various device screen sizes. I also designed the
+                                    checkout form, the product page image gallery, and the product details page.</p>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6 mx-auto">
+                                    <figure class="figure mb-5">
+                                        <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#oldCheckout" href="">
+                                            <div class="img-thumbnail">
+                                                <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/newegg/newegg_oldCheckout.png}" alt="">
+                                            </div>
+                                        </a>
+                                        <figcaption class="figure-caption text-dark">An early iteration of the checkout page.</figcaption>
+                                    </figure>
+                                </div>
+
+                                <div class="col-md-6 mx-auto">
+                                    <figure class="figure mb-5">
+                                        <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#checkout" href="">
+                                            <div class="img-thumbnail">
+                                                <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/newegg/newegg_checkout.png}" alt="">
+                                            </div>
+                                        </a>
+                                        <figcaption class="figure-caption text-dark">The final version of the checkout page.</figcaption>
+                                    </figure>
+                                </div>
+
+                            </div>
+
+                            <div class="mb-5">
+                                <h3 class="text-uppercase text-secondary mb-3">Challenges</h3>
+                                <p class="lead">One challenge I ran into was designing the flexboxes so they would fit the way we wanted on different screen sizes, especially for the product page image gallery. Initially, the image gallery would
+                                    scale
+                                    responsively between certain screen sizes, but would then snap to abruptly to the next style when the screen size became smaller or bigger than the initial range. I eventually solved this problem by adjusting the
+                                    flexbox style starting from the largest screen size the website would support, which made sure the smaller styles would not break the larger ones.</p>
+                            </div>
+
+                            <figure class="figure mb-5">
+                                <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#products" href="">
+                                    <div class="img-thumbnail">
+                                        <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/newegg/newegg_products.png}" alt="">
+                                    </div>
+                                </a>
+                                <figcaption class="figure-caption text-dark">The final version of the products page with the image gallery.</figcaption>
+                            </figure>
+
+                            <div class="mb-5">
+                                <h3 class="text-uppercase text-secondary mb-3">Results</h3>
+                                <p class="lead">The resulting website had a clean and simple visual style that fit well on various screen sizes. The flow of the website resulted in a smooth navigation experience, as each step in the purchasing
+                                    process
+                                    (viewing products, adding to cart, and checking out) is spread out between 1-2 pages and requires minimal clicks to complete (not including entering checkout details).</p>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6 mx-auto">
+                                    <figure class="figure mb-5">
+                                        <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#home" href="">
+                                            <div class="img-thumbnail">
+                                                <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/newegg/newegg_home.png}" alt="">
+                                            </div>
+                                        </a>
+                                        <figcaption class="figure-caption text-dark">The final version of the homepage with the featured sale banner and featured products showcase.</figcaption>
+                                    </figure>
+                                </div>
+
+                                <div class="col-md-6 mx-auto">
+                                    <figure class="figure mb-5">
+                                        <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#detail" href="">
+                                            <div class="img-thumbnail">
+                                                <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/newegg/newegg_detail.png}" alt="">
+                                            </div>
+                                        </a>
+                                        <figcaption class="figure-caption text-dark">The final version of the example product details page.</figcaption>
+                                    </figure>
+                                </div>
+
+                            </div>
+
+                            <div class="mb-5">
+                                <h3 class="text-uppercase text-secondary mb-3">Reflection</h3>
+                                <p class="lead">Through this project, I gained a better understanding of how to create a smooth website flow, and how to design flexboxes to better fit different screen sizes. This project also helped me further
+                                    develop my
+                                    skills in using JavaScript and using flexboxes. One thing that could be changed in the future is the layout of the website. Currently the main body content fills the entire window width, which makes it too wide on
+                                    larger screens. In the future, I would change the width main body content's flexboxes and make them smaller, and adjust the breakpoints and wrapping accordingly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modals -->
+            <div aria-hidden="true" aria-labelledby="logo" class="modal fade" id="logo" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body mx-3 mb-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/newegg/newegg_ca.jpeg}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div aria-hidden="true" aria-labelledby="oldCheckout" class="modal fade" id="oldCheckout" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body mx-3 mb-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/newegg/newegg_oldCheckoutFull.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div aria-hidden="true" aria-labelledby="checkout" class="modal fade" id="checkout" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body mx-3 mb-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/newegg/newegg_checkout.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div aria-hidden="true" aria-labelledby="products" class="modal fade" id="products" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body mx-3 mb-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/newegg/newegg_productsFull.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div aria-hidden="true" aria-labelledby="home" class="modal fade" id="home" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body mx-3 mb-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/newegg/newegg_home.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div aria-hidden="true" aria-labelledby="detail" class="modal fade" id="detail" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body mx-3 mb-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/newegg/newegg_detail.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+
+</html>
