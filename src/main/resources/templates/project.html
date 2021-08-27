@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html th:replace="~{fragments/layout :: layout(~{::title/text()}, ~{::link}, ~{::#content})}">
+
+    <head>
+        <title>Christopher Louie | Portfolio</title>
+    </head>
+
+    <body>
+        <div id="content" th:remove="tag" th:object="${project}">
+            <!-- Masthead -->
+            <header class="masthead bg-primary text-center">
+                <div class="container col-md-8 d-flex align-items-center flex-column">
+
+                    <!-- Masthead Heading -->
+                    <h1 class="masthead-heading2 text-secondary mb-3" th:text="*{getTitle()}">Project Title</h1>
+
+                    <!-- Masthead Subheading -->
+                    <p class="masthead-subheading font-weight-light text-dark mb-0" th:text="*{getTags()}">Project Tags</p>
+
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main th:replace="@{'fragments/' + *{getLink()}} :: *{getLink()}">
+                <!-- Project Section -->
+                <section class="page-section mb-0" id="project">
+                    <div class="container">
+                        <div class="row text-dark">
+                            <div class="col-md-8 mx-auto">
+                                <div class="mb-5">
+                                    <h3 class="text-uppercase text-secondary mb-3">Example Heading</h3>
+                                    <p class="lead">This some example text for testing purposes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+
+</html>
