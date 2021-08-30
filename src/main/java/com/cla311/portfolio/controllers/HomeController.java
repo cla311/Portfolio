@@ -13,10 +13,10 @@ import com.cla311.portfolio.services.ProjectService;
 @Controller public class HomeController {
 	@Autowired private ProjectService projectService;
 	private static final String[] mainLinks = {
-		"/#portfolio", "/#about", "/#contact"
+		"/", "/#portfolio", "/#about", "/#contact"
 	};
 	private static final String[] indexLinks = {
-		"#portfolio", "#about", "#contact"
+		"#", "#portfolio", "#about", "#contact"
 	};
 
 	@GetMapping("/") public String index(Model model) {

@@ -11,8 +11,8 @@
                         <div class="col-md-8 mx-auto">
                             <figure class="figure mb-5">
                                 <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#logo" href="">
-                                    <div class="img-thumbnail">
-                                        <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/hockey/hockey.png}" alt="">
+                                    <div class="img-thumbnail fit-content mx-auto">
+                                        <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/hockey/hockey.png}" alt="NHL Stats Almanac Logo">
                                     </div>
                                 </a>
                                 <figcaption class="figure-caption text-dark">The logo for the NHL Stats Almanac.</figcaption>
@@ -22,29 +22,30 @@
                                 <h3 class="text-uppercase text-secondary mb-3">Project Details</h3>
                                 <p class="lead"><span class="font-weight-bold">Date:</span> October - December 2018</p>
                                 <p class="lead"><span class="font-weight-bold">Tools:</span> HTML5, CSS3, PHP, MySQLi, Ajax, XAMPP, phpMyAdmin</p>
-                                <p class="lead"><span class="font-weight-bold">Project Type:</span> School Project - Front-End/Back-End Web Design</p>
+                                <p class="lead"><span class="font-weight-bold">Project Type:</span> School Project - Front End/Back End Web Design</p>
                                 <p class="lead"><span class="font-weight-bold">Team Members:</span> Ryan D.</p>
                                 <p class="lead"><span class="font-weight-bold">Role:</span> Programmer</p>
                             </div>
 
                             <div class="mb-5">
-                                <h3 class="text-uppercase text-secondary mb-3">Goal</h3>
-                                <p class="lead">In a team of two, create a PHP website that uses external data stored in a MySQLi database and provides additional features for registered users. We chose to create a NHL stats website using the NHL
-                                    API.
+                                <h3 class="text-uppercase text-secondary mb-3">Goal/Description</h3>
+                                <p class="lead">
+                                    In a team of two, create a PHP website that uses external data stored in a MySQLi database and provides additional features for registered users. We chose to create a NHL stats website using the NHL API.
                                 </p>
                             </div>
 
                             <div class="mb-5">
                                 <h3 class="text-uppercase text-secondary mb-3">Process</h3>
-                                <p class="lead">The project began with the project proposal, which was then followed by the Entity Relationship Diagram outlining the structure of the website and the database tables needed. Next we began designing the
-                                    database and main pages of the website. I created the PHP API calls to the NHL API to retrieve the team and player stats, as well as the MySQLi queries to insert stats of new players into the database and to update
-                                    the
-                                    stats of existing players. I was also in charge of designing the Ajax filters and pagination for the search page, as well as creating the database tables and MySQLi queries to retrieve the stats.</p>
+                                <p class="lead">
+                                    The project began with the project proposal, followed by the Entity Relationship Diagram, which outlined the structure of the website and the database tables needed. Next we began designing the database and main
+                                    pages of the website. I created the PHP API calls to the NHL API to retrieve the team and player stats, as well as the MySQLi queries to insert stats of new players into the database and to update the stats of
+                                    existing players. I was also in charge of designing the Ajax filters and pagination for the search page, as well as creating the database tables and MySQLi queries to retrieve the stats.
+                                </p>
                             </div>
 
                             <figure class="figure mb-5">
                                 <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#home" href="">
-                                    <div class="img-thumbnail">
+                                    <div class="img-thumbnail fit-content mx-auto">
                                         <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/hockey/hockey_home.png}" alt="">
                                     </div>
                                 </a>
@@ -53,19 +54,18 @@
 
                             <div class="mb-5">
                                 <h3 class="text-uppercase text-secondary mb-3">Challenges</h3>
-                                <p class="lead">One challenge I ran into was accessing the data from the NHL API and updating the database efficiently. This occurred because there was no official documentation from the NHL and the only documentation
-                                    of
-                                    the NHL API was from an ongoing documentation project created by Drew Hynes with community input on GitLab. I was able to decrease the database update time by updating only the player list in the search page, and
-                                    then
-                                    updating the team and player stats and details when the user views details of the specific player/team. This however made the search filters inaccurate as the stats would not be updated.</p>
+                                <p class="lead">
+                                    One challenge I ran into was accessing the data from the NHL API and updating the database efficiently. This occurred because there was no official documentation from the NHL and the only documentation of the NHL
+                                    API was from an ongoing documentation project created by Drew Hynes with community input on GitLab. I was able to decrease the database update time by updating only the player list in the search page, and then
+                                    updating the team and player stats and details when the user views details of the specific player/team. This however made the search filters inaccurate as the stats would not be updated.
+                                </p>
                             </div>
 
                             <div class="row">
-
-                                <div class="col-md-6 mx-auto">
+                                <div class="col-lg mx-auto">
                                     <figure class="figure mb-5">
                                         <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#oldSearch" href="">
-                                            <div class="img-thumbnail">
+                                            <div class="img-thumbnail fit-content mx-auto">
                                                 <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/hockey/hockey_oldSearch.png}" alt="">
                                             </div>
                                         </a>
@@ -73,38 +73,38 @@
                                     </figure>
                                 </div>
 
-                                <div class="col-md-6 mx-auto">
+                                <div class="col-lg mx-auto">
                                     <figure class="figure mb-5">
                                         <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#search" href="">
-                                            <div class="img-thumbnail">
+                                            <div class="img-thumbnail fit-content mx-auto">
                                                 <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/hockey/hockey_search.png}" alt="">
                                             </div>
                                         </a>
                                         <figcaption class="figure-caption text-dark">The final version of the search page.</figcaption>
                                     </figure>
                                 </div>
-
                             </div>
 
                             <div class="mb-5">
-                                <p class="lead">Retrieving the data was difficult as data was spread out between separate API endpoints. I solved the data retrieval issue by finding out that loading the NHL teams list give the individual team IDs
-                                    which
-                                    could then be used to retrieve the team details, stats, and rosters. From the rosters, I was then able to retrieve the individual player IDs to get the player details and stats.</p>
+                                <p class="lead">
+                                    Retrieving the data was difficult as data was spread out between separate API endpoints. I solved the data retrieval issue by finding out that loading the NHL teams list give the individual team IDs which could
+                                    then be used to retrieve the team details, stats, and rosters. From the rosters, I was then able to retrieve the individual player IDs to get the player details and stats.
+                                </p>
                             </div>
 
                             <div class="mb-5">
                                 <h3 class="text-uppercase text-secondary mb-3">Results</h3>
-                                <p class="lead">The resulting website was noticeably faster and did not time out when updating the database. The pagination and filters on the search page resulted in smoother, cleaner search experience, allowing users
-                                    to
-                                    make more detailed searches, and large search results lists to be viewed more easily in paged results instead of one single list.</p>
+                                <p class="lead">
+                                    The resulting website was noticeably faster and did not time out when updating the database. The pagination and filters on the search page resulted in smoother, cleaner search experience, allowing users to make
+                                    more detailed searches, and large search results lists to be viewed more easily in paged results instead of one single list.
+                                </p>
                             </div>
 
                             <div class="row">
-
-                                <div class="col-md-6 mx-auto">
+                                <div class="col-lg mx-auto">
                                     <figure class="figure mb-5">
                                         <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#player" href="">
-                                            <div class="img-thumbnail">
+                                            <div class="img-thumbnail fit-content mx-auto">
                                                 <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/hockey/hockey_player.png}" alt="">
                                             </div>
                                         </a>
@@ -112,25 +112,25 @@
                                     </figure>
                                 </div>
 
-                                <div class="col-md-6 mx-auto">
+                                <div class="col-lg mx-auto">
                                     <figure class="figure mb-5">
                                         <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#fantasy" href="">
-                                            <div class="img-thumbnail">
+                                            <div class="img-thumbnail fit-content mx-auto">
                                                 <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/hockey/hockey_fantasy.png}" alt="">
                                             </div>
                                         </a>
                                         <figcaption class="figure-caption text-dark">The final version of the team roster for a user created fantasy team.</figcaption>
                                     </figure>
                                 </div>
-
                             </div>
 
                             <div class="mb-5">
                                 <h3 class="text-uppercase text-secondary mb-3">Reflection</h3>
-                                <p class="lead">Through this project, I learned how to use PHP, MySQLi, and Ajax. I also applied my web design and web programming skills, resulting in a simple to use NHL stats database web application. However, the
-                                    database updating could have been better optimized to make the user experience smoother. In the future, I could solve this issue by using cron/Task Scheduler to update the database periodically. This would result
-                                    in
-                                    data not always being up-to-date, but would reduce loading times drastically.</p>
+                                <p class="lead">
+                                    Through this project, I learned how to use PHP, MySQLi, and Ajax. I also applied my web design and web programming skills, resulting in a simple to use NHL stats database web application. However, the database
+                                    updating could have been better optimized to make the user experience smoother. In the future, I could solve this issue by using cron/Task Scheduler to update the database periodically. This would result in data
+                                    not always being up-to-date, but would reduce loading times drastically.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -143,12 +143,12 @@
                     <div class="modal-content">
 
                         <!-- Modal Header -->
-                        <div class="modal-header border-0">
+                        <div class="modal-header">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 
                         <!-- Modal Body -->
-                        <div class="modal-body mx-3 mb-3 p-0">
+                        <div class="modal-body m-3 p-0">
                             <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/hockey/hockey.png}" alt="">
                         </div>
                     </div>
@@ -160,12 +160,12 @@
                     <div class="modal-content">
 
                         <!-- Modal Header -->
-                        <div class="modal-header border-0">
+                        <div class="modal-header">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 
                         <!-- Modal Body -->
-                        <div class="modal-body mx-3 mb-3 p-0">
+                        <div class="modal-body m-3 p-0">
                             <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/hockey/hockey_home.png}" alt="">
                         </div>
                     </div>
@@ -177,12 +177,12 @@
                     <div class="modal-content">
 
                         <!-- Modal Header -->
-                        <div class="modal-header border-0">
+                        <div class="modal-header">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 
                         <!-- Modal Body -->
-                        <div class="modal-body mx-3 mb-3 p-0">
+                        <div class="modal-body m-3 p-0">
                             <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/hockey/hockey_oldSearch.png}" alt="">
                         </div>
                     </div>
@@ -194,12 +194,12 @@
                     <div class="modal-content">
 
                         <!-- Modal Header -->
-                        <div class="modal-header border-0">
+                        <div class="modal-header">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 
                         <!-- Modal Body -->
-                        <div class="modal-body mx-3 mb-3 p-0">
+                        <div class="modal-body m-3 p-0">
                             <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/hockey/hockey_searchFull.png}" alt="">
                         </div>
                     </div>
@@ -211,12 +211,12 @@
                     <div class="modal-content">
 
                         <!-- Modal Header -->
-                        <div class="modal-header border-0">
+                        <div class="modal-header">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 
                         <!-- Modal Body -->
-                        <div class="modal-body mx-3 mb-3 p-0">
+                        <div class="modal-body m-3 p-0">
                             <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/hockey/hockey_player.png}" alt="">
                         </div>
                     </div>
@@ -228,12 +228,12 @@
                     <div class="modal-content">
 
                         <!-- Modal Header -->
-                        <div class="modal-header border-0">
+                        <div class="modal-header">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 
                         <!-- Modal Body -->
-                        <div class="modal-body mx-3 mb-3 p-0">
+                        <div class="modal-body m-3 p-0">
                             <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/hockey/hockey_fantasy.png}" alt="">
                         </div>
                     </div>
