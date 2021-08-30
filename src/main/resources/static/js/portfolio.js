@@ -19,6 +19,14 @@ $(function() {
         });
     });
 
+    // Logo home button
+    $(".navbar-brand").click(function(e) {
+        if ($(this).prop("href").split("#")[1] == "") {
+            e.preventDefault();
+            toTop();
+        }
+    })
+
     // Show scroll to top button if page is not at top
     showTopButton();
     // Scroll to top button appear

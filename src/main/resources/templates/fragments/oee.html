@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+        <!-- Main Content -->
+        <main th:fragment="oee">
+            <!-- Project Section -->
+            <section class="page-section mb-0" id="project">
+                <div class="container">
+                    <div class="row text-dark">
+                        <div class="col-md-8 mx-auto">
+                            <figure class="figure mb-5">
+                                <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#logo" href="">
+                                    <div class="img-thumbnail fit-content mx-auto">
+                                        <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/oee/oee.png}" alt="Outdoor Equipment Exchange Logo">
+                                    </div>
+                                </a>
+                                <figcaption class="figure-caption text-dark">The logo for the Outdoor Equipment Exchange.</figcaption>
+                            </figure>
+
+                            <div class="mb-5">
+                                <h3 class="text-uppercase text-secondary mb-3">Project Details</h3>
+                                <p class="lead"><span class="font-weight-bold">Date:</span> June - August 2020</p>
+                                <p class="lead"><span class="font-weight-bold">Tools:</span> Figma, Framer, React (inside Framer)</p>
+                                <p class="lead"><span class="font-weight-bold">Project Type:</span> School Project - UI/UX Design w/ Front End Code for Interactivity</p>
+                                <p class="lead"><span class="font-weight-bold">Team Members:</span> Reiza G, Sunita M., Jasmine W.</p>
+                                <p class="lead"><span class="font-weight-bold">Role:</span> UI Designer, Prototype Designer, Programmer</p>
+                            </div>
+
+                            <div class="mb-5">
+                                <h3 class="text-uppercase text-secondary mb-3">Goal/Description</h3>
+                                <p class="lead">
+                                    In a team of 4/5, design an interactive UI prototype for a web/mobile app focused on a specific problem in a domain (topic) your familliar with that either solves the problem or improves on existing web/mobile app
+                                    solutions to the problem. My team created the mobile app Outdoor Equipment Exchange, which solves the following problems:
+                                </p>
+                                <ol class="lead">
+                                    <li class="mb-1">
+                                        People wanting to try out a new outdoor sport or activity having to either find a place to rent the necessary equipment or buy the equipment if rental is not possible. Renting equipment may not aways be
+                                        possible depending on location, equipment availibility, the type of equipment needed, and/or the specific equipment sizes needed. Additionally, people may be hesitant to buy equipment they may not want to spend
+                                        the money buying equipment to try a sport or activity to then have the equipment sit there beacuse they either didn't like the sport or activity or rarely have time to do it.
+                                    </li>
+                                    <li>
+                                        Equipment sitting around beacuse the owner either does not play the sport/do the activity anymore, or does not have the time to play the sport/do the activity.
+                                    </li>
+                                </ol>
+                                <p class="lead">
+                                    Outdoor Equipment Exchange solves these problems by providing an marketplace similar to Facebook Marketplace and Craigslist, where users can post their own equipment for rental or rent equipment from other users.
+                                    Check out the ineractive UI prototype created using Figma (initial design) and Framer (final design and interactivity) for Outdoor Equipment Exchange below.
+                                </p>
+                            </div>
+
+                            <div class="ratio ratio-9x16 oee-prototype mx-auto mb-5">
+                                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1)" max-width="552" max-height="1018" src="https://framer.com/embed/IAT-334-App--p5ypHdiOZwxGIMRs9G9E/nGvqTog4I?highlights=0" allowfullscreen></iframe>
+                            </div>
+
+                            <div class="mb-5">
+                                <h3 class="text-uppercase text-secondary mb-3">Process</h3>
+                                <p class="lead">
+                                    The project began with chosing our domain (outdoor activites), followed by researching and conducting intervews with potential users to determine the problem(s) our app would focus on. Based on our research and
+                                    interview results, we selected the problems we would focus on and created the project proposal. Next we created the app's style guide and designed the wireflows Using the style guide and wireflows, we created the
+                                    UI mockups, before finially converting them to the final interactive prototype. I assisted in creating the app's style guide and designing the layout of the app. I was also in charge of adding and coding the final
+                                    prototype's interactivity in Framer.
+                                </p>
+                            </div>
+
+                            <figure class="figure mb-5">
+                                <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#landing" href="">
+                                    <div class="img-thumbnail fit-content mx-auto">
+                                        <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/oee/oee_landing.png}" alt="">
+                                    </div>
+                                </a>
+                                <figcaption class="figure-caption text-dark">The final version of the landing page which is shown if the users are not logged in or are logged out.</figcaption>
+                            </figure>
+
+                            <div class="mb-5">
+                                <h3 class="text-uppercase text-secondary mb-3">Challenges</h3>
+                                <p class="lead">
+                                    One challenge I ran into when working on the interactive UI prototype in Figma was that the user preferences were not being stored between screens, thus making it hard to show that the user preferences are saved
+                                    globally. This occurred because any state changes to components within the current frame are only local to the current frame and reset when leaving the frame. I was able to solve this by switching from Figma to
+                                    Framer, which allows the creation of code components to add custom interaction logic, global data storage, state based component styles.
+                                </p>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg mx-auto">
+                                    <figure class="figure mb-5">
+                                        <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#wireframes" href="">
+                                            <div class="img-thumbnail fit-content mx-auto">
+                                                <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/oee/oee_wireframes.png}" alt="">
+                                            </div>
+                                        </a>
+                                        <figcaption class="figure-caption text-dark">Some of the wireframes with the initial UI designs.</figcaption>
+                                    </figure>
+                                </div>
+
+                                <div class="col-lg mx-auto">
+                                    <figure class="figure mb-5">
+                                        <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#prototype" href="">
+                                            <div class="img-thumbnail fit-content mx-auto">
+                                                <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/oee/oee_prototype.png}" alt="">
+                                            </div>
+                                        </a>
+                                        <figcaption class="figure-caption text-dark">Some of the final prototype designs interactivity was added.</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="mb-5">
+                                <p class="lead">
+                                    Another challenge we ran into was figuring out how to handle rental renewals and makeing sure equpment gets returned after the rental expires. The solution we came up with for renewals was to allow the equipment
+                                    owners to choose whether to allow the equipment to be renewed up to 1 day/3 days/1 week before the due date or to not allow renewal. Based on our renewals solution, I then came up with the idea for late fees.
+                                    Equipment owners can choose to charge late fees either per hour, per day, or per 3 days, and set their own late fees (within reason). They can also choose to not charge late fees if they want as well.
+                                </p>
+                            </div>
+
+                            <div class="mb-5">
+                                <h3 class="text-uppercase text-secondary mb-3">Results</h3>
+                                <p class="lead">
+                                    Switching to Framer allowed for a more accurate protoype as we were able to demonstrait the user preference saving in action. As well, Framer allowed us to to create template components with on/of styles more
+                                    easily than Figma. Creating our renewals and late fees systemas and having them be set by the equipment owner mad it easy for us to implement the renter side of each system. Users can renew their active rentals up
+                                    till the set number of days before due date by clicking the renew button under the equipment on the "My Rentals" tab of the "My Listings page". Areter the set number of before due date has passed, the renew button
+                                    will be disabled. Once the the due date has passed, the renew button will switch to the late fee button.
+                                </p>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg mx-auto">
+                                    <figure class="figure mb-5">
+                                        <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#home" href="">
+                                            <div class="img-thumbnail fit-content mx-auto">
+                                                <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/oee/oee_home.png}" alt="">
+                                            </div>
+                                        </a>
+                                        <figcaption class="figure-caption text-dark">The final version of the home page.</figcaption>
+                                    </figure>
+                                </div>
+
+                                <div class="col-lg mx-auto">
+                                    <figure class="figure mb-5">
+                                        <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#messages" href="">
+                                            <div class="img-thumbnail fit-content mx-auto">
+                                                <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/oee/oee_messages.png}" alt="">
+                                            </div>
+                                        </a>
+                                        <figcaption class="figure-caption text-dark">The final version of the user messages list page.</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="mb-5">
+                                <h3 class="text-uppercase text-secondary mb-3">Reflection</h3>
+                                <p class="lead">
+                                    Through this project, I learned and practiced the entire process of developing an interactive UI prototype. I also learned how to use Framer for the first time and learned how to prototype an app using tools like
+                                    Figma and Framer. While the current UI prototype shows most of the apps functionality well, some functions could be better shown with a full app prototype like the search and filtering. In the future, I would like
+                                    to create a full app prototype, which would better show all the current features and allow for more features that we could not show using Figma and Framer.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modals -->
+            <div aria-hidden="true" aria-labelledby="logo" class="modal fade" id="logo" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body m-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/oee/oee.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div aria-hidden="true" aria-labelledby="landing" class="modal fade" id="landing" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body m-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/oee/oee_landing.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div aria-hidden="true" aria-labelledby="wireframes" class="modal fade" id="wireframes" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body m-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/oee/oee_wireframes.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div aria-hidden="true" aria-labelledby="prototype" class="modal fade" id="prototype" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body m-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/oee/oee_prototype.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div aria-hidden="true" aria-labelledby="home" class="modal fade" id="home" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body m-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/oee/oee_home.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div aria-hidden="true" aria-labelledby="messages" class="modal fade" id="messages" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body m-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/oee/oee_messages.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+
+</html>
