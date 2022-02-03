@@ -160,7 +160,7 @@ function filterProjects(currFilter, filters, projects) {
         return false;
     }
 
-    selector = '.' + checkedClasses.join(', .'),
+    selector = '.' + checkedClasses.join('.'),
         show = projects.filter(selector);
     projects.not(show).fadeOut('3000');
     show.fadeIn('3000');
