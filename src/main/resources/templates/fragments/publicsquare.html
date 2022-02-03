@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+        <!-- Main Content -->
+        <main th:fragment="publicsquare">
+            <!-- Project Section -->
+            <section class="page-section mb-0" id="project">
+                <div class="container">
+                    <div class="row text-dark">
+                        <div class="col-md-8 mx-auto">
+                            <figure class="figure mb-5">
+                                <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#logo" href="">
+                                    <div class="img-thumbnail fit-content mx-auto">
+                                        <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/publicsquare/publicsquare.png}" alt="SFU Public Square Logo">
+                                    </div>
+                                </a>
+                                <figcaption class="figure-caption text-dark">The logo for SFU Public Square.</figcaption>
+                            </figure>
+
+                            <div class="mb-5">
+                                <h3 class="text-uppercase text-secondary mb-3">Project Details</h3>
+                                <p class="lead"><span class="font-weight-bold">Date:</span> September - December 2021</p>
+                                <p class="lead"><span class="font-weight-bold">Tools:</span> Adobe Experience Manager (AEM), HTML5, CSS3, JavaScript, jQuerry</p>
+                                <p class="lead"><span class="font-weight-bold">Project Type:</span> Co-op Job @ SFU Public Square - Front End Web Design</p>
+                                <p class="lead"><span class="font-weight-bold">Team Members:</span> SFU Public Square Team, Denim & Steel</p>
+                                <p class="lead"><span class="font-weight-bold">Role:</span> Website Development Assistant</p>
+                                <p class="lead"><span class="font-weight-bold">Link to live site:</span> <a href="https://www.sfu.ca/publicsquare.html">https://www.sfu.ca/publicsquare.html</a></p>
+                            </div>
+
+                            <div class="mb-5">
+                                <h3 class="text-uppercase text-secondary mb-3">Goal/Project Description</h3>
+                                <p class="lead">
+                                    Continuing from the work of the previous co-op student, finish building the list of old pages required for launch on the new SFU Public Square website using AEM while also building new event pages as they are
+                                    needed. Once the required launch pages and the pages for recent, current, and upcoming events are built, assist in testing and launching the new website. The new SFU Public Square website is expected to launch
+                                    sometime before the end of 2021.
+                                </p>
+                            </div>
+
+                            <div class="mb-5">
+                                <h3 class="text-uppercase text-secondary mb-3">Responsibilities</h3>
+                                <p class="lead">
+                                    As the Website Development Assistant, I was responsible for building pages on the new SFU Public Square website for its launch in early December. This included recreating pages from the old website for the new
+                                    website using the new website design, compiling existing content from various pages onto new pages, and building brand new pages on the new website based on an updated content strategy. I was also responsible for
+                                    building pages for upcoming events as they were added to the old website and editing past event pages to include post-event content including post-event content as needed.
+                                </p>
+
+                                <p class="lead">
+                                    Additionally, I worked on editing the CSS styles of various components based on feedback from our user testing, Denim & Steel (the design agency we were working with), SFU Public Square Design Lead Geoff, SFU
+                                    Public Square Communications Manager Doug, and SFU Public Square Executive Director Janet. This included changing the design of components, adjusting the margins, padding, font size, line height, and letter spacing
+                                    of components, and adding additional CSS rules to modify specific parts of components.
+                                </p>
+
+                                <p class="lead">
+                                    Finally, I also worked on creating custom components and styles that weren’t already created by the previous co-op student. Some of the components and styles I created were a custom RSVP bar, the HTML code for
+                                    manually uploaded videos, the JavaScript overrides for accordions with images in columns, the thumbnail list with custom content different from the page content, the styling for dates on thumbnail lists, and
+                                    several custom list templates.
+                                </p>
+                            </div>
+
+                            <figure class="figure mb-5">
+                                <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#homepage" href="">
+                                    <div class="img-thumbnail fit-content mx-auto">
+                                        <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/publicsquare/homepage.png}" alt="">
+                                    </div>
+                                </a>
+                                <figcaption class="figure-caption text-dark">The new SFU Public Square homepage, which showcases the upcoming events, the event topics, and the featured items.</figcaption>
+                            </figure>
+
+                            <div class="mb-5">
+                                <h3 class="text-uppercase text-secondary mb-3">Challenges</h3>
+                                <p class="lead">
+                                    One challenge I ran into was getting columns with images to behave properly in accordions. When an column component with images was added to an accordion, the image columns would behave opposite to the accordion
+                                    (shown, when accordion is closes, hidden when accordion was open). I initially tried fixing this by adding the images to the text component above where the images were supposed to go. However, this made it
+                                    difficult to arrange the images and have the images dynamically resize based on the screen size. While it would have theoretically been to fix this with custom CSS classes, this would have taken a lot of time. The
+                                    solution I ended up with was to revert to using the column component and create custom a JavaScript/jQuery script to reverse the behaviour of the image columns to match the behaviour of the accordions. This also
+                                    allowed me to use the column component layout and dynamic sizing features instead of needing to custom code them.
+                                </p>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg mx-auto">
+                                    <figure class="figure mb-5">
+                                        <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#summit2014Old" href="">
+                                            <div class="img-thumbnail fit-content mx-auto">
+                                                <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/publicsquare/2014_summit_old.png}" alt="">
+                                            </div>
+                                        </a>
+                                        <figcaption class="figure-caption text-dark">The 2014 community summit landing page on the old website.</figcaption>
+                                    </figure>
+                                </div>
+
+                                <div class="col-lg mx-auto">
+                                    <figure class="figure mb-5">
+                                        <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#summit2014" href="">
+                                            <div class="img-thumbnail fit-content mx-auto">
+                                                <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/publicsquare/2014_summit.png}" alt="">
+                                            </div>
+                                        </a>
+                                        <figcaption class="figure-caption text-dark">The 2014 community summit landing page on the new website.</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="mb-5">
+                                <p class="lead">
+                                    Another challenge I ran into was getting the custom RSVP bar to display correctly. When designing the custom RSVP bar, I ran into and issue with the RSVP button not positioning and behaving correctly. Originally,
+                                    the RSVP button would touch the edge of the RSVP bar's background on large screens with a huge gap between it and the RSVP text. Additionally, as the screen size/window decreases to the tablet screen size, the
+                                    background would shrink more than the RSVP button, causing the button to extend past the edge of the bacground. I tried fixing these issues by messing with the margin and padding of the RSVP bar itself and the
+                                    button which did not work. I then tried changing the CSS display property for the button to see if it would reslove the issues. After trying several disolay types, I found that setting the button to display as an
+                                    inline-table fixed the positioning and spacing issues and alowed for the spacing between the text and button to be adjusted.
+                                </p>
+                            </div>
+
+                            <div class="mb-5">
+                                <h3 class="text-uppercase text-secondary mb-3">Results</h3>
+                                <p class="lead">
+                                    During my co-op work term, I finished building the remaining important pages for launch (over 150 pages) and edited the pages on the new website as needed. Additionally, I built and styled several new custom
+                                    components that came up as I was building pages. I also helped edit the CSS styles of various components based on feedback from our user testing, the design agency we were working with, the Design Lead, the
+                                    Communications Manager, and the Executive Director.
+                                </p>
+
+                                <p class="lead">
+                                    There were some event pages that we wanted to have built for launch that I did not have time to complete. Additionally, there were some design suggestions that Denim & Steel suggested on the last design meeting
+                                    before the end of my co-op work term that we did not have time to implement. However, since the website is being constantly updated and we had trained the rest of the SFU Public Square team that wasn't already
+                                    working on the new website, the missing pages and unimplemented design suggestions were pushed to be built and implemented post-launch.
+                                </p>
+
+                                <p class="lead">
+                                    Personally, I learned how to use AEM and improved my skills in overriding existing CSS styles and JavaScript behaviour. I also gained experience in testing and launching a website. In the future, I would like to
+                                    learn how to use the new AEM UI and the new features it comes with since SFU defaults to using the classic AEM UI. As well, I would also like to learn about how to make an AEM website live on a server since IT
+                                    Services was responsible for doing it at SFU.
+                                </p>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg mx-auto">
+                                    <figure class="figure mb-5">
+                                        <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#homeFeatured" href="">
+                                            <div class="img-thumbnail fit-content mx-auto">
+                                                <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/publicsquare/home_featured.png}" alt="">
+                                            </div>
+                                        </a>
+
+                                        <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#rsvpBar" href="">
+                                            <div class="img-thumbnail fit-content mx-auto">
+                                                <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/publicsquare/rsvp_bar.png}" alt="">
+                                            </div>
+                                        </a>
+
+                                        <figcaption class="figure-caption text-dark">The homepage featured lists (above) and the custom RSVP bar for upcoming events (below).</figcaption>
+                                    </figure>
+                                </div>
+
+                                <div class="col-lg mx-auto">
+                                    <figure class="figure mb-5">
+                                        <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#accordion" href="">
+                                            <div class="img-thumbnail fit-content mx-auto">
+                                                <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/publicsquare/accordion_columns.png}" alt="">
+                                            </div>
+                                        </a>
+                                        <figcaption class="figure-caption text-dark">An example of an accordion with images in columns.</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div class="mb-5">
+                                <h3 class="text-uppercase text-secondary mb-3">Reflection</h3>
+                                <p class="lead">
+                                    Through this project, I learned how to use Java for web design, Spring Boot, and Postgres. I also applied my web design and web programming skills, resulting in a simple to use clip sahrer and group finder.
+                                    However, there wer some features we counldn't implement due to time, such as selecting from the queued users to join your group and notifying them, viewing other user profiles, add a built-in chat system, and clip
+                                    tags. In the future, I would like to implement the missing features, add additonal clip platforms, and continue to update this app with hopes of making official releasing it once it's more complete.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modals -->
+            <div aria-hidden="true" aria-labelledby="logo" class="modal fade" id="logo" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body m-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/publicsquare/publicsquare.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div aria-hidden="true" aria-labelledby="homepage" class="modal fade" id="homepage" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body m-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/publicsquare/homepage_full.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div aria-hidden="true" aria-labelledby="summit2014Old" class="modal fade" id="summit2014Old" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body m-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/publicsquare/2014_summit_old_full.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div aria-hidden="true" aria-labelledby="summit2014" class="modal fade" id="summit2014" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body m-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/publicsquare/2014_summit_full.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div aria-hidden="true" aria-labelledby="homeFeatured" class="modal fade" id="homeFeatured" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body m-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/publicsquare/home_featured.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div aria-hidden="true" aria-labelledby="rsvpBar" class="modal fade" id="rsvpBar" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body m-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/publicsquare/rsvp_bar.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div aria-hidden="true" aria-labelledby="accordion" class="modal fade" id="accordion" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- Modal Body -->
+                        <div class="modal-body m-3 p-0">
+                            <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/publicsquare/accordion_columns_full.png}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+
+</html>

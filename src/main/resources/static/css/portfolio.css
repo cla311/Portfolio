@@ -168,6 +168,13 @@ body {
     width: 12.5rem;
 }
 
+.filterGroup {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+}
+
 .ratio-9x16 {
     --bs-aspect-ratio: calc(16 / 9 * 100%);
 }
