@@ -3,6 +3,9 @@
 var page = $("html, body");
 
 $(function() {
+    // Update copyright with current year
+    getCurrentYear()
+
     // Auto scroll to section if page was loaded with an anchor link in the url
     autoScroll();
     // Scroll to corisponding section when a navbar link is clicked
@@ -62,7 +65,13 @@ $(function() {
     });
 });
 
-// Collapse Navbar
+// Get current year
+function getCurrentYear() {
+    thisyear = new Date().getFullYear();
+    $('.currentyear').text(thisyear);
+}
+
+// Collapse navbar
 function navbarCollapse() {
     $('#navbarResponsive').collapse('hide');
 };
