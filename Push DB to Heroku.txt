@@ -1,4 +1,0 @@
-# Postgress pushlocal db (Git Bash)
-heroku pg:reset postgresql-shaped-24670 --confirm chrislouie-portfolio
-PGPASSWORD=root pg_dump -U postgres -F c -c -O portfolio > out.sql
-PGUSER=rvjkoexnvlythd PGPASSWORD=60cb32b96fda5c696088c0ec4717f9f184be4f755d769651b413c3d8c0d5077b pg_restore -h 'ec2-18-209-153-180.compute-1.amazonaws.com' -d d9d21ge0bj9dig < out.sql
