@@ -1,8 +1,11 @@
-FROM gradle:8.2.1-jdk17-alpine AS build
+FROM ubuntu:latest AS build
+RUN apt-get update
+RUN apt-get install openjdk-17-jdk -y
 COPY . .
-RUN gradle clean build -x test
+RUN chmod +x ./gradlew
+RUN ./gradlew bootJar --no-daemon
 
 FROM openjdk:17.0.2-jdk-slim
-COPY --from=build /build/libs/chrislouie-portfolio-1.0.jar app.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-Dspring.profiles.active=prod", "-jar", "/app.jar"]
+COPY --from=build /build/libs/chrislouie-portfolio-1.0.jar app.jar
+ENTRYPOINT ["java", "-Dspring.profiles.active=prod", "-jar", "app.jar"]
