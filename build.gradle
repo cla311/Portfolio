@@ -9,7 +9,10 @@ apply plugin: "io.spring.dependency-management"
 
 group = "com.cla311"
 version = "1.0"
-sourceCompatibility = "17"
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+}
 
 repositories {
     mavenCentral()
@@ -18,7 +21,7 @@ repositories {
 
 docker {
 	name "cl-portfolio"
-	dockerfile file('src/docker/Dockerfile')
+	dockerfile file('Dockerfile-dev')
 	copySpec.from(jar).rename(".*","app.jar")
 	buildArgs(['JAR_FILE': "app.jar"])
 }

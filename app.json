@@ -1,6 +1,0 @@
-{
-  "name": "Christopher Louie | Portfolio",
-  "description": "",
-  "image": "heroku/gradle",
-  "addons": [ "heroku-postgresql" ]
-}
