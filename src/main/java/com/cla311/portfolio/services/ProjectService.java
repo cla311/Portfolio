@@ -1,20 +1,19 @@
 package com.cla311.portfolio.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
-
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.stereotype.Service;
 
 import com.cla311.portfolio.models.Project;
 import com.cla311.portfolio.repositories.ProjectRepository;
 
-@Service public class ProjectService {
-	@Autowired private ProjectRepository projectRepository;
+@Service
+public class ProjectService {
+	@Autowired
+	private ProjectRepository projectRepository;
 
 	public List<Project> getProjects() {
 		Sort sort = Sort.by(Direction.DESC, "endDate", "startDate");
@@ -26,6 +25,6 @@ import com.cla311.portfolio.repositories.ProjectRepository;
 
 	public Project getProjectByID(String link) {
 		return projectRepository.findById(link).orElseThrow(
-			() -> new IllegalArgumentException("No Project with ID " + link));
+				() -> new IllegalArgumentException("No Project with ID " + link));
 	}
 }
