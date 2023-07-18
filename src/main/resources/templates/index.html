@@ -1,139 +1,155 @@
 <!DOCTYPE html>
 <html th:replace="~{fragments/layout :: layout(~{::title/text()}, ~{::link}, ~{::#content})}">
 
-    <head>
-        <title>Christopher Louie | Portfolio</title>
-    </head>
+<head>
+    <title>Christopher Louie | Portfolio</title>
+</head>
 
-    <body>
-        <div id="content" th:remove="tag">
-            <!-- Masthead -->
-            <header class="masthead bg-primary text-center">
-                <div class="container col-md-8 d-flex align-items-center flex-column">
+<body>
+    <div id="content" th:remove="tag">
+        <!-- Masthead -->
+        <header class="masthead bg-primary text-center">
+            <div class="container col-md-8 d-flex align-items-center flex-column">
 
-                    <!-- Masthead Avatar Image -->
-                    <img class="masthead-avatar mb-5" th:src="@{/img/logo.svg}" alt="Chris Louie logo">
+                <!-- Masthead Avatar Image -->
+                <img class="masthead-avatar mb-5" th:src="@{/img/logo.svg}" alt="Chris Louie logo">
 
-                    <!-- Masthead Heading -->
-                    <h1 class="masthead-heading text-secondary mb-3">Christopher Louie</h1>
+                <!-- Masthead Heading -->
+                <h1 class="masthead-heading text-secondary mb-3">Christopher Louie</h1>
 
-                    <!-- Masthead Subheading -->
-                    <p class="masthead-subheading font-weight-light text-dark mb-0">Web Designer - Programmer - Game Designer</p>
+                <!-- Masthead Subheading -->
+                <p class="masthead-subheading font-weight-light text-dark mb-0">Web Designer - Software Developer - Game
+                    Designer</p>
+
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Portfolio Section -->
+            <section class="page-section portfolio" id="portfolio">
+                <div class="container">
+
+                    <!-- Portfolio Section Heading -->
+                    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">Portfolio</h2>
+
+                    <!-- Portfolio Filters -->
+                    <div class="filterGroup mb-3">
+                        <input type="checkbox" class="filter btn-check" id="all" autocomplete="off" data-filter="all"
+                            checked>
+                        <label class="btn btn-outline-secondary shadow-none" for="all">Show All</label>
+
+                        <input type="checkbox" class="filter btn-check" id="web-design" autocomplete="off"
+                            data-filter="web-design">
+                        <label class="btn btn-outline-secondary shadow-none" for="web-design">Web Design</label>
+
+                        <input type="checkbox" class="filter btn-check" id="front-end" autocomplete="off"
+                            data-filter="front-end">
+                        <label class="btn btn-outline-secondary shadow-none" for="front-end">Front End</label>
+
+                        <input type="checkbox" class="filter btn-check" id="back-end" autocomplete="off"
+                            data-filter="back-end">
+                        <label class="btn btn-outline-secondary shadow-none" for="back-end">Back End</label>
+
+                        <input type="checkbox" class="filter btn-check" id="ui-ux" autocomplete="off"
+                            data-filter="ui-ux">
+                        <label class="btn btn-outline-secondary shadow-none" for="ui-ux">UI/UX Design</label>
+
+                        <input type="checkbox" class="filter btn-check" id="embedded-systems" autocomplete="off"
+                            data-filter="embedded-systems">
+                        <label class="btn btn-outline-secondary shadow-none" for="embedded-systems">Embedded
+                            Systems</label>
+                    </div>
+
+                    <!-- Portfolio Grid Items -->
+                    <div class="row row-cols-1 row-cols-md-3" th:remove="all-but-first">
+                        <div th:each="project : ${project_list}" class="col portfolio-column web-design front-end"
+                            th:classappend="${project.getCssTags()}">
+                            <a class="portfolio-item text-decoration-none mx-auto"
+                                th:href="@{|/projects/${project.getLink()}|}">
+                                <img class="img-fluid d-block p-4" th:src="@{|/img/portfolio/${project.getImage()}|}"
+                                    alt="">
+                                <div class="portfolio-item-caption text-center">
+                                    <h4 class="text-secondary mb-3" th:text="${project.getTitle()}">Project Title</h4>
+                                    <h5 class="font-weight-light text-dark mb-0" th:text="${project.getTags()}">Project
+                                        Tags</h5>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Portfolio Item 1 -->
+                        <div class="col portfolio-column web-design front-end">
+                            <a class="portfolio-item text-decoration-none mx-auto" href="#">
+                                <img class="img-fluid d-block p-4" src="img/portfolio/newegg/newegg_ca.jpeg" alt="">
+                                <div class="portfolio-item-caption text-center">
+                                    <h4 class="text-secondary mb-3">E-commerce Company Website Prototype</h4>
+                                    <h5 class="font-weight-light text-dark mb-0">Web Design - Front-End</h5>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Portfolio Item 2 -->
+                        <div class="col portfolio-column web-design front-end back-end">
+                            <a class="portfolio-item text-decoration-none mx-auto" href="#">
+                                <img class="img-fluid d-block p-4" src="/img/portfolio/hockey/hockey.png" alt="">
+                                <div class="portfolio-item-caption text-center">
+                                    <h4 class="text-secondary mb-3">NHL Stats Almanac: A PHP & MySQli Web App</h4>
+                                    <h5 class="font-weight-light text-dark mb-0">Web Design - Front-End - Back-End</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section class="page-section bg-primary mb-0" id="about">
+                <div class="container">
+
+                    <!-- About Section Heading -->
+                    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">About</h2>
+
+                    <!-- About Section Content -->
+                    <div class="row text-dark">
+                        <div class="col-md-8 mx-auto">
+                            <p class="lead">
+                                I am Christopher Louie, an Interactive Arts and Technology graduate with a minor in
+                                Computer Science and a background in interactive tech, web design, software devlopment,
+                                and game design. I am especially interested in web design, software devlopment, and
+                                UI/UX design. I am skilled with HTML5, CSS3, JavaScript, jQuery, Bootstrap, and Python.
+                            </p>
+
+                            <p class="lead">
+                                My work focuses on finding creative and interesting ways of using data to enhance
+                                functionality and visual design. In my spare time, I enjoy playing video games, music
+                                production, playing the piano, watching sports, and playing board and trading card
+                                games.
+                            </p>
+                        </div>
+                    </div>
 
                 </div>
-            </header>
+            </section>
 
-            <!-- Main Content -->
-            <main>
-                <!-- Portfolio Section -->
-                <section class="page-section portfolio" id="portfolio">
-                    <div class="container">
+            <!-- Contact Section -->
+            <section class="page-section mb-0" id="contact">
+                <div class="container">
 
-                        <!-- Portfolio Section Heading -->
-                        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">Portfolio</h2>
+                    <!-- Contact Section Heading -->
+                    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">Contact</h2>
 
-                        <!-- Portfolio Filters -->
-                        <div class="filterGroup mb-3">
-                            <input type="checkbox" class="filter btn-check" id="all" autocomplete="off" data-filter="all" checked>
-                            <label class="btn btn-outline-secondary shadow-none" for="all">Show All</label>
-
-                            <input type="checkbox" class="filter btn-check" id="web-design" autocomplete="off" data-filter="web-design">
-                            <label class="btn btn-outline-secondary shadow-none" for="web-design">Web Design</label>
-
-                            <input type="checkbox" class="filter btn-check" id="front-end" autocomplete="off" data-filter="front-end">
-                            <label class="btn btn-outline-secondary shadow-none" for="front-end">Front End</label>
-
-                            <input type="checkbox" class="filter btn-check" id="back-end" autocomplete="off" data-filter="back-end">
-                            <label class="btn btn-outline-secondary shadow-none" for="back-end">Back End</label>
-
-                            <input type="checkbox" class="filter btn-check" id="ui-ux" autocomplete="off" data-filter="ui-ux">
-                            <label class="btn btn-outline-secondary shadow-none" for="ui-ux">UI/UX Design</label>
-
-                            <input type="checkbox" class="filter btn-check" id="embedded-systems" autocomplete="off" data-filter="embedded-systems">
-                            <label class="btn btn-outline-secondary shadow-none" for="embedded-systems">Embedded Systems</label>
-                        </div>
-
-                        <!-- Portfolio Grid Items -->
-                        <div class="row row-cols-1 row-cols-md-3" th:remove="all-but-first">
-                            <div th:each="project : ${project_list}" class="col portfolio-column web-design front-end" th:classappend="${project.getCssTags()}">
-                                <a class="portfolio-item text-decoration-none mx-auto" th:href="@{|/projects/${project.getLink()}|}">
-                                    <img class="img-fluid d-block p-4" th:src="@{|/img/portfolio/${project.getImage()}|}" alt="">
-                                    <div class="portfolio-item-caption text-center">
-                                        <h4 class="text-secondary mb-3" th:text="${project.getTitle()}">Project Title</h4>
-                                        <h5 class="font-weight-light text-dark mb-0" th:text="${project.getTags()}">Project Tags</h5>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <!-- Portfolio Item 1 -->
-                            <div class="col portfolio-column web-design front-end">
-                                <a class="portfolio-item text-decoration-none mx-auto" href="#">
-                                    <img class="img-fluid d-block p-4" src="img/portfolio/newegg/newegg_ca.jpeg" alt="">
-                                    <div class="portfolio-item-caption text-center">
-                                        <h4 class="text-secondary mb-3">E-commerce Company Website Prototype</h4>
-                                        <h5 class="font-weight-light text-dark mb-0">Web Design - Front-End</h5>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <!-- Portfolio Item 2 -->
-                            <div class="col portfolio-column web-design front-end back-end">
-                                <a class="portfolio-item text-decoration-none mx-auto" href="#">
-                                    <img class="img-fluid d-block p-4" src="/img/portfolio/hockey/hockey.png" alt="">
-                                    <div class="portfolio-item-caption text-center">
-                                        <h4 class="text-secondary mb-3">NHL Stats Almanac: A PHP & MySQli Web App</h4>
-                                        <h5 class="font-weight-light text-dark mb-0">Web Design - Front-End - Back-End</h5>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- /.row -->
-                    </div>
-                </section>
-
-                <!-- About Section -->
-                <section class="page-section bg-primary mb-0" id="about">
-                    <div class="container">
-
-                        <!-- About Section Heading -->
-                        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">About</h2>
-
-                        <!-- About Section Content -->
-                        <div class="row text-dark">
-                            <div class="col-md-8 mx-auto">
-                                <p class="lead">
-                                    I am Christopher Louie, an Interactive Arts and Technology student minoring in Computer Science with a background in interactive tech, web design, data analysis, and game design. I am especially interested in web
-                                    design, programming, data anylisis, and UI/UX design. I am particularly skilled with HTML5, CSS3, JS, Java, Spring Boot, Photoshop, and Illustrator.
-                                </p>
-
-                                <p class="lead">
-                                    My work focuses on finding creative, interesting ways of using data to enhance functionality and visual design. In my spare time, I enjoy playing video games, music production, playing the piano, and watching
-                                    sports.
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
-
-                <!-- Contact Section -->
-                <section class="page-section mb-0" id="contact">
-                    <div class="container">
-
-                        <!-- Contact Section Heading -->
-                        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-5">Contact</h2>
-                        
-                        <!-- Contact Section Content -->
-                        <div class="row text-dark text-center">
-                            <div class="col-md-8 mx-auto">
-                                <p class="lead">christopherlouie@shaw.ca</p>
-                                <p class="lead">604-367-3928</p>
-                            </div>
+                    <!-- Contact Section Content -->
+                    <div class="row text-dark text-center">
+                        <div class="col-md-8 mx-auto">
+                            <p class="lead">christopherlouie@shaw.ca</p>
+                            <p class="lead">604-367-3928</p>
                         </div>
                     </div>
-                </section>
-            </main>
-        </div>
-    </body>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
 
 </html>
