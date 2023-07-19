@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <!-- Main Content -->
+    <main th:fragment="bwl">
+        <!-- Project Section -->
+        <section class="page-section mb-0" id="project">
+            <div class="container">
+                <div class="row text-dark">
+                    <div class="col-md-8 mx-auto">
+                        <figure class="figure d-block mx-auto mb-5">
+                            <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#logo"
+                                href="#">
+                                <div class="img-thumbnail fit-content mx-auto">
+                                    <img class="figure-img img-fluid d-block" th:src="@{/img/portfolio/bwl/bwl.png}"
+                                        alt="Better Way Lighting Logo">
+                                </div>
+                            </a>
+                            <figcaption class="figure-caption text-dark mt-2 text-center">
+                                Better Way Lighting Logo</figcaption>
+                        </figure>
+
+                        <div class="mb-5">
+                            <h3 class="text-uppercase text-secondary">Project Details</h3>
+                            <p class="lead">
+                                <span class="fw-bold">Date:</span> July - December 2022
+                            </p>
+                            <p class="lead">
+                                <span class="fw-bold">Project Type:</span> Co-op Job, Better Way Lighting - UI/UX
+                                Design, Embedded Systems Development
+                            </p>
+                            <p class="lead">
+                                <span class="fw-bold">Role:</span> Front-End Developer (Embedded Software Engineer)
+                            </p>
+                            <p class="lead">
+                                <span class="fw-bold">Tools:</span> Figma, FigJam, C/C++, ESP-IDF, Python, HTML5, CSS3,
+                                JavaScript, jQuery
+                            </p>
+                        </div>
+
+                        <div class="mb-5">
+                            <h3 class="text-uppercase text-secondary">The T-Panel</h3>
+                            <p class="lead">
+                                The <b>T-Panel</b> is Better Way Lighting's upcoming new panel light whose design and
+                                software was created in-house. The T-Panel is Better Way Lighting's first panel light
+                                that is made to be comparable to other panel lights in white output but is lighter,
+                                easier to rig, and less expensive. The T-Panel is also designed to fit accessories made
+                                for other panel lights of the same size.
+                            </p>
+
+                            <p class="lead">
+                                Since the T-Panel has not been released at ny the time I finished my co-op, several
+                                details about the panel have been omitted, including the official name of the panel.
+                            </p>
+
+                            <p class="lead">
+                                I worked on the design, layout, and behaviour of the T-Panel's UI, as well as connecting
+                                the UI to the data model and device backend. I also added new data model entries and
+                                backend functionality as needed to implement new features or modify existing features
+                                and UI behaviour.
+                            </p>
+
+                        </div>
+
+                        <div class="mb-5">
+                            <h3 class="text-uppercase text-secondary">UI Design and Features</h3>
+                            <h4 class="text-secondary">Initial UI Design and Layout</h4>
+                            <p class="lead">
+                                I started designing the UI by first making a list of all the potential features and UI
+                                screens we wanted to include based on the reference panel lights and the T-Panel
+                                specifications. Using the list, I designed mockups of the UI cards and layout in Figma
+                                based on the UI library used on our other devices that use the smaller variant of the
+                                T-Panel screen.
+                            </p>
+                        </div>
+
+                        <figure class="figure d-block mx-auto mb-5">
+                            <a class="modal-image text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#cct_mode" href="#">
+                                <div class="img-thumbnail fit-content mx-auto">
+                                    <img class="figure-img img-fluid d-block"
+                                        th:src="@{/img/portfolio/bwl/cct_mode.png}" alt="">
+                                </div>
+                            </a>
+                            <figcaption class="figure-caption text-dark mt-2 text-center">
+                                CCT Mode - Initial mockups
+                            </figcaption>
+                        </figure>
+
+                        <figure class="figure d-block mx-auto mb-5">
+                            <a class="modal-image text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#dmx_settings" href="#">
+                                <div class="img-thumbnail fit-content mx-auto">
+                                    <img class="figure-img img-fluid d-block"
+                                        th:src="@{/img/portfolio/bwl/dmx_settings.png}" alt="">
+                                </div>
+                            </a>
+                            <figcaption class="figure-caption text-dark mt-2 text-center">
+                                Some of the DMX Settings screens - Initial mockups with the menu title
+                            </figcaption>
+                        </figure>
+
+                        <div class="mb-5">
+                            <h4 class="text-secondary">Feature and Layout Selection</h4>
+                            <p class="lead">
+                                After going through the UI mockups with the team, we decided on the device and UI
+                                features we wanted to include from the UI mockups, as well as the design of the UI
+                                cards. Based on the new feature list, I created flow charts for each of the potential UI
+                                layouts. Using the layout flow charts, the team decided on a single menu layout that
+                                updates to show control mode-specific settings based on the selected control mode.
+                            </p>
+                        </div>
+
+                        <figure class="figure d-block mx-auto mb-5">
+                            <a class="modal-image text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#menu_flow" href="#">
+                                <div class="img-thumbnail fit-content mx-auto">
+                                    <img class="figure-img img-fluid d-block"
+                                        th:src="@{/img/portfolio/bwl/menu_flow.png}" alt="">
+                                </div>
+                            </a>
+                            <figcaption class="figure-caption text-dark mt-2 text-center">
+                                Selected T-Panel menu layout
+                            </figcaption>
+                        </figure>
+
+                        <div class="mb-5">
+                            <p class="lead">
+                                Using the UI mockups, I test-coded test versions of the UI cards with and without the
+                                menu title to roughly determine the layout of the cards and the font sizes. Based on the
+                                feedback from the team, we determined the layout of the card elements and chose font
+                                sizes that allowed us to fit at least 3 lines of text on the display. Based on the test
+                                versions of the UI cards, I created a mockup list of the basic card types and font size
+                                options. The card type mockup list was then sent to the design team to finalize the
+                                design of the UI cards.
+                            </p>
+                        </div>
+
+                        <figure class="figure d-block mx-auto mb-5">
+                            <a class="modal-image text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#card_screens" href="#">
+                                <div class="img-thumbnail fit-content mx-auto">
+                                    <img class="figure-img img-fluid d-block"
+                                        th:src="@{/img/portfolio/bwl/card_screens.png}" alt="">
+                                </div>
+                            </a>
+                            <figcaption class="figure-caption text-dark mt-2 text-center">
+                                Basic card types and font size options mockup list - Includes card with title prior to
+                                removal, does not include custom cards
+                            </figcaption>
+                        </figure>
+
+                        <figure class="figure d-block mx-auto mb-5">
+                            <a class="modal-image text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#source_select" href="#">
+                                <div class="img-thumbnail fit-content mx-auto"> <img
+                                        class="figure-img img-fluid d-block"
+                                        th:src="@{/img/portfolio/bwl/source_select.png}" alt="">
+                                </div>
+                            </a>
+                            <figcaption class="figure-caption text-dark mt-2 text-center">
+                                Finalized design of the Source Select (later Control Mode) card - Second card shows
+                                selecting the source/control mode with dimming
+                            </figcaption>
+                        </figure>
+
+                        <div class="mb-5">
+                            <h3 class="text-uppercase text-secondary">Building the UI</h3>
+                            <h4 class="text-secondary">Initial UI Coding</h4>
+                            <p class="lead">
+                                Using the selected UI layout and the finalized UI card designs, I began modifying the UI
+                                library on a separate branch to fit the larger screen size and coding the T-Panel UI in
+                                a separate code repository while the backend and data model was being built. I also
+                                imported and modified existing custom cards we needed from the other devices using the
+                                same UI library and created some additional new custom cards. While coding the T-Panel
+                                UI, I also added dummy callback functions to the cards that require them in preparation
+                                for connecting the UI with the data model and backend.
+                            </p>
+                        </div>
+
+                        <figure class="figure d-block mx-auto mb-5">
+                            <a class="modal-image text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#status_cct" href="#">
+                                <div class="img-thumbnail fit-content mx-auto">
+                                    <img class="figure-img img-fluid d-block"
+                                        th:src="@{/img/portfolio/bwl/status_cct.jpeg}" alt="">
+                                </div>
+                            </a>
+                            <figcaption class="figure-caption text-dark mt-2 text-center">
+                                Custom CCT status screen card with the CCT mode icon
+                            </figcaption>
+                        </figure>
+
+                        <figure class="figure d-block mx-auto mb-5">
+                            <a class="modal-image text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#system_settings" href="#">
+                                <div class="img-thumbnail fit-content mx-auto">
+                                    <img class="figure-img img-fluid d-block"
+                                        th:src="@{/img/portfolio/bwl/system_settings.jpeg}" alt="">
+                                </div>
+                            </a>
+                            <figcaption class="figure-caption text-dark mt-2 text-center">
+                                System settings menu title card with the DMX mode icon
+                            </figcaption>
+                        </figure>
+
+                        <div class="mb-5">
+                            <h4 class="text-secondary">Linking the UI</h4>
+                            <p class="lead">
+                                Once the initial UI, data model, and backend were created, I began linking the UI to the
+                                data model and backend. During the linking process, the UI was reorganized and the UI
+                                cards for features not included in the initial release were removed. Additionally, I
+                                added new UI cards and display elements for features in the initial backend that wasn't
+                                in the initial UI. I also assisted in adding any data model entries and backend
+                                functionality for the UI cards that had not been implemented yet.
+                            </p>
+                        </div>
+
+                        <figure class="figure d-block mx-auto mb-5">
+                            <a class="modal-image text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#blackout" href="#">
+                                <div class="img-thumbnail fit-content mx-auto">
+                                    <img class="figure-img img-fluid d-block"
+                                        th:src="@{/img/portfolio/bwl/blackout.jpeg}" alt="">
+                                </div>
+                            </a>
+                            <figcaption class="figure-caption text-dark mt-2 text-center">
+                                Blackout modal - Shows when blackout is enabled by pressing the blackout button
+                            </figcaption>
+                        </figure>
+
+                        <div class="mb-5">
+                            <h4 class="text-secondary">Adding New Features</h4>
+                            <p class="lead">
+                                After linking the initial UI to the initial data model and backend, the team began
+                                implementing new major features and adjusting the behaviour of existing features and the
+                                UI. Once the major features were added, we then began adding the minor features we
+                                wanted to have for release. I assisted in modifying and adding to the UI, data model,
+                                and backend based on the features and device behaviours we wanted. As of the writing of
+                                this report, the final remaining features for the T-Panel release are being added.
+                            </p>
+
+                            <p class="lead">
+                                Some of the features I added or assisted in adding the UI, data model entries and
+                                backend for include the adjustable lock timeout, several warning and status modals,
+                                navigating to the status screen on encoder scroll and UI lock, device temperature
+                                display, and allowing users to set the flash button output to the current light output.
+                                I also helped add development-only behaviour and UI cards to make it easier to test the
+                                device.
+                            </p>
+                        </div>
+
+                        <div class="row mb-5">
+                            <div class="col-lg mx-auto">
+                                <figure class="figure d-block mx-auto mb-3">
+                                    <a class="modal-image text-decoration-none" data-bs-toggle="modal"
+                                        data-bs-target="#dev_mode" href="#">
+                                        <div class="img-thumbnail fit-content mx-auto">
+                                            <img class="figure-img img-fluid d-block"
+                                                th:src="@{/img/portfolio/bwl/dev_mode.jpeg}" alt="">
+                                        </div>
+                                    </a>
+                                    <figcaption class="figure-caption text-dark mt-2 text-center">
+                                        Dev mode modal - Shows when entering dev mode via the special button command
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="col-lg mx-auto">
+                                <figure class="figure d-block mx-auto">
+                                    <figure class="figure d-block mx-auto">
+                                        <a class="modal-image text-decoration-none" data-bs-toggle="modal"
+                                            data-bs-target="#run_tests" href="#">
+                                            <div class="img-thumbnail fit-content mx-auto">
+                                                <img class="figure-img img-fluid d-block"
+                                                    th:src="@{/img/portfolio/bwl/run_tests.jpeg}" alt="">
+                                            </div>
+                                        </a>
+                                        <figcaption class="figure-caption text-dark mt-2 text-center">
+                                            Run tests developer mode card - Allows the running of automated tests from
+                                            the UI
+                                        </figcaption>
+                                    </figure>
+                            </div>
+                        </div>
+
+                        <div class="row mb-5">
+                            <div class="col-lg mx-auto">
+                                <figure class="figure d-block mx-auto mb-3">
+                                    <a class="modal-image text-decoration-none" data-bs-toggle="modal"
+                                        data-bs-target="#lock_timeout" href="#">
+                                        <div class="img-thumbnail fit-content mx-auto">
+                                            <img class="figure-img img-fluid d-block"
+                                                th:src="@{/img/portfolio/bwl/lock_timeout.jpeg}" alt="">
+                                        </div>
+                                    </a>
+                                    <figcaption class="figure-caption text-dark mt-2 text-center">
+                                        Lock timeout setting card
+                                    </figcaption>
+                                </figure>
+                            </div>
+
+                            <div class="col-lg mx-auto">
+                                <figure class="figure d-block mx-auto">
+                                    <figure class="figure d-block mx-auto">
+                                        <a class="modal-image text-decoration-none" data-bs-toggle="modal"
+                                            data-bs-target="#flash_set" href="#">
+                                            <div class="img-thumbnail fit-content mx-auto">
+                                                <img class="figure-img img-fluid d-block"
+                                                    th:src="@{/img/portfolio/bwl/flash_set.jpeg}" alt="">
+                                            </div>
+                                        </a>
+                                        <figcaption class="figure-caption text-dark mt-2 text-center">
+                                            Flash card - Allows the user to set the flash button output to the current
+                                            light output
+                                        </figcaption>
+                                    </figure>
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <h3 class="text-uppercase text-secondary">Reflection</h3>
+                            <p class="lead">
+                                This was my first time working on a physical device for release and on a lighting
+                                product. From this project, I was able to gain experience in building the software for a
+                                lighting device, designing and building the on-device UI, and working with embedded
+                                systems. I was also able to improve my skills in designing and building the UI and
+                                features so that they behave as expected by the users.
+                            </p>
+
+                            <p class="lead">
+                                Throughout this project, I was able to utilize my UI design and coding skills, as well
+                                as draw from the feedback and expertise of my fellow team members to help design and
+                                code the various UI cards and backend functionality.
+                            </p>
+
+                            <p class="lead">
+                                Being able to help create a lighting device from start to finish has been an amazing
+                                experience. I am looking forward to being able to take the skills I have gained from
+                                this project and utilize them in future projects.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modals -->
+        <div aria-hidden="true" aria-labelledby="logo" class="modal fade" id="logo" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body m-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/bwl/bwl.png}"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="cct_mode" class="modal fade" id="cct_mode" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body m-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block mx-auto" th:src="@{/img/portfolio/bwl/cct_mode.png}"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="dmx_settings" class="modal fade" id="dmx_settings" role="dialog"
+            tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body m-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block mx-auto"
+                            th:src="@{/img/portfolio/bwl/dmx_settings.png}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="menu_flow" class="modal fade" id="menu_flow" role="dialog"
+            tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body m-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block mx-auto"
+                            th:src="@{/img/portfolio/bwl/menu_flow.png}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="card_screens" class="modal fade" id="card_screens" role="dialog"
+            tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body m-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block mx-auto"
+                            th:src="@{/img/portfolio/bwl/card_screens.png}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="source_select" class="modal fade" id="source_select" role="dialog"
+            tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body m-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block mx-auto"
+                            th:src="@{/img/portfolio/bwl/source_select.png}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="status_cct" class="modal fade" id="status_cct" role="dialog"
+            tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body m-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block mx-auto"
+                            th:src="@{/img/portfolio/bwl/status_cct.jpeg}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="system_settings" class="modal fade" id="system_settings" role="dialog"
+            tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body m-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block mx-auto"
+                            th:src="@{/img/portfolio/bwl/system_settings.jpeg}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="blackout" class="modal fade" id="blackout" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body m-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block mx-auto"
+                            th:src="@{/img/portfolio/bwl/blackout.jpeg}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="dev_mode" class="modal fade" id="dev_mode" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body m-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block mx-auto"
+                            th:src="@{/img/portfolio/bwl/dev_mode.jpeg}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="run_tests" class="modal fade" id="run_tests" role="dialog"
+            tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body m-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block mx-auto"
+                            th:src="@{/img/portfolio/bwl/run_tests.jpeg}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="lock_timeout" class="modal fade" id="lock_timeout" role="dialog"
+            tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body m-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block mx-auto"
+                            th:src="@{/img/portfolio/bwl/lock_timeout.jpeg}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="flash_set" class="modal fade" id="flash_set" role="dialog"
+            tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body m-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block mx-auto"
+                            th:src="@{/img/portfolio/bwl/flash_set.jpeg}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
