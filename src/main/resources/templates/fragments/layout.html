@@ -1,82 +1,87 @@
 <!DOCTYPE html>
 <html th:fragment="layout (title, links, content)" xmlns:th="http://www.thymeleaf.org">
 
-    <head>
-        <title th:utext="${title}">Christopher Louie | Portfolio</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
-        <script th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
-        <script src="https://kit.fontawesome.com/fd77361902.js" crossorigin="anonymous"></script>
+<head>
+    <title th:utext="${title}">Christopher Louie | Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
+    <script src="https://kit.fontawesome.com/fd77361902.js" crossorigin="anonymous"></script>
 
-        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
-        <link rel="stylesheet" th:href="@{/webjars/jquery-ui/jquery-ui.css}">
-        <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <link rel="stylesheet" th:href="@{/webjars/jquery-ui/jquery-ui.css}">
+    <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
 
-        <link rel="stylesheet" th:href="@{/css/portfolio.min.css}">
-        <script th:src="@{/js/portfolio.min.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/portfolio.min.css}">
+    <script th:src="@{/js/portfolio.min.js}"></script>
 
-        <th:block th:replace="${links} ?: ~{}" />
+    <th:block th:replace="${links} ?: ~{}" />
 
-    </head>
+</head>
 
-    <body id="page-top" class="bg-white">
+<body id="page-top" class="bg-white">
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" th:href="@{|${nav_links[0]}|}">Christopher Louie</a>
-                <button class="navbar-toggler navbar-toggler-right fw-bold rounded shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" th:href="@{|${nav_links[1]}|}">Portfolio</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" th:href="@{|${nav_links[2]}|}">About</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1">
-                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" th:href="@{|${nav_links[3]}|}">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" th:href="@{|${nav_links[0]}|}">Christopher Louie</a>
+            <button class="navbar-toggler navbar-toggler-right fw-bold rounded shadow-none" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            th:href="@{|${nav_links[1]}|}">Portfolio</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            th:href="@{|${nav_links[2]}|}">About</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                            th:href="@{|${nav_links[3]}|}">Contact</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-
-        <div th:replace="${content}">
-            <!-- Masthead -->
-            <header class="masthead bg-primary text-center">
-                <div class="container col-md-8 d-flex align-items-center flex-column">
-
-                    <!-- Masthead Avatar Image -->
-                    <img class="masthead-avatar mb-5" th:src="@{/img/logo.svg}" alt="Chris Louie logo">
-
-                    <!-- Masthead Heading -->
-                    <h1 class="masthead-heading text-secondary mb-3">Christopher Louie</h1>
-
-                    <!-- Masthead Subheading -->
-                    <p class="masthead-subheading font-weight-light text-dark mb-0">Web Designer - Programmer - Game Designer</p>
-
-                </div>
-            </header>
         </div>
+    </nav>
 
-        <!-- Copyright Section -->
-        <footer class="footer py-4 text-center text-white">
-            <div class="container">
-                <small>Copyright &copy; Christopher Louie 2019-<span class="currentyear"></span></small>
+    <div th:replace="${content}">
+        <!-- Masthead -->
+        <header class="masthead bg-primary text-center">
+            <div class="container col-md-8 d-flex align-items-center flex-column">
+
+                <!-- Masthead Avatar Image -->
+                <img class="masthead-avatar mb-5" th:src="@{/img/logo.svg}" alt="Chris Louie logo">
+
+                <!-- Masthead Heading -->
+                <h1 class="masthead-heading text-secondary mb-3">Christopher Louie</h1>
+
+                <!-- Masthead Subheading -->
+                <p class="masthead-subheading font-weight-light text-dark mb-0">Web Designer - Programmer - Game
+                    Designer</p>
+
             </div>
-        </footer>
+        </header>
+    </div>
 
-        <!-- Scroll to Top Button -->
-        <div class="scroll-to-top to-top position-fixed align-items-center rounded">
-            <span class="text-center text-white m-auto">
-                <i class="fas fa-chevron-up"></i>
-            </span>
+    <!-- Copyright Section -->
+    <footer class="footer py-4 text-center text-white">
+        <div class="container">
+            <small>Copyright &copy; Christopher Louie 2019-<span class="currentyear"></span></small>
         </div>
-    </body>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top to-top position-fixed align-items-center rounded">
+        <span class="text-center text-white m-auto">
+            <i class="fas fa-chevron-up"></i>
+        </span>
+    </div>
+</body>
 
 </html>
