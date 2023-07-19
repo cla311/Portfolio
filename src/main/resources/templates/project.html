@@ -21,7 +21,7 @@
         </header>
 
         <!-- Main Content -->
-        <main th:replace="@{'fragments/' + *{getLink()}} :: *{getLink()}">
+        <main th:replace="~{@{'fragments/' + *{getLink()}} :: *{getLink()}}">
             <!-- Project Section -->
             <section class="page-section mb-0" id="project">
                 <div class="container">
