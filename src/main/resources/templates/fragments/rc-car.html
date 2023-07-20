@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <!-- Main Content -->
+    <main th:fragment="rc-car">
+        <!-- Project Section -->
+        <section class="page-section mb-0" id="project">
+            <div class="container">
+                <div class="row text-dark">
+                    <div class="col-md-8 mx-auto">
+                        <figure class="figure d-block mx-auto mb-5 col-lg-8">
+                            <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#rc-car"
+                                href="#">
+                                <div class="img-thumbnail fit-content mx-auto">
+                                    <img class="figure-img img-fluid d-block"
+                                        th:src="@{/img/portfolio/rc-car/rc-car.jpeg}" alt="">
+                                </div>
+                            </a>
+                            <figcaption class="figure-caption text-dark mt-2 text-center">
+                                Develpment version of the RC car without the webcam or ultrasonic sensors
+                            </figcaption>
+                        </figure>
+
+                        <div class="mb-5">
+                            <h3 class="text-uppercase text-secondary mb-3">Project Details</h3>
+                            <p class="lead">
+                                <span class="fw-bold">Date:</span> January - April 2023
+                            </p>
+                            <p class="lead">
+                                <span class="fw-bold">Project Type:</span> School Project, Team of 3 - Embedded Systems
+                                Development, Web Design, Full Stack Development
+                            </p>
+                            <p class="lead">
+                                <span class="fw-bold">Role:</span> Embeded Systems Developer, Web Designer, Full Stack
+                                Developer
+                            </p>
+                            <p class="lead">
+                                <span class="fw-bold">Tools:</span> C, HTML5, CSS3, JavaScript, jQuery, Node.js
+                            </p>
+                        </div>
+
+                        <div class="mb-5">
+                            <h3 class="text-uppercase text-secondary mb-3">Goal/Description</h3>
+                            <p class="lead">
+                                In a team of 3-4, create a embeded system in Linux (Debian in our classes case) on the
+                                BeagleBone Green using primarily C/C++ that iteracts with BeagleBone Green (BBG), Zen
+                                Cape (custom cape created for the class), or external hardware. The system can
+                                additionally interact with an embeded web server or a remote web server/client if
+                                needed. We created a RC car with two modes, manual mode and automatic mode.
+                            </p>
+
+                            <ul class="lead list-unstyled">
+                                <li>
+                                    In manual mode, users can control the robot using an integrated controller web page
+                                    on the robot. Using the front and rear ultrasonic sensors, the RC car is able to
+                                    automatically stop when it detects a wall or object in the way.
+                                </li>
+                                <li>
+                                    In auto mode, the RC car can roam around freely and avoid objects and walls in front
+                                    of it using the front ultrasonic sensor by automatically turning away.
+                                </li>
+                            </ul>
+
+                            <p class="lead">
+                                From the controller, users can toggle between manual and auto modes. The controller also
+                                provides users with a driver cam via a webcam connected (only currently works when not
+                                connected wirelessly).
+                            </p>
+                        </div>
+
+                        <figure class="figure text-center d-block mx-auto mb-5">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/w9l4UaCfXYE"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                            <figcaption class="figure-caption text-dark mt-2 text-center">
+                                RC car - Manual mode demo
+                            </figcaption>
+                        </figure>
+
+                        <div class="mb-5">
+                            <h3 class="text-uppercase text-secondary mb-3">Process</h3>
+                            <h4 class="text-secondary">Project Proposal and Initial Wiring</h4>
+                            <p class="lead">
+                                The project began with the project proposal, followed by the initial building and wiring
+                                of the RC car. Since the RC car kit we borrowed from our instructor already came with
+                                the motors and wheels preassembled to the chassis (was assembled by a group in a
+                                previous semester the first time it was lent out), we only had to connect the motors to
+                                the BBG and assemble the platform on the chassis that would hold the BBG, breadboard,
+                                webcam, and ultrasonic sensors. Using a 4 channel relay, I connected the motors so that
+                                the left and right side motors (we got a 4 motor RC car) would each be controlled by
+                                using 2 relay channels, one for forward and one for backwards.
+                            </p>
+                        </div>
+
+                        <figure class="figure text-center d-block mx-auto mb-5">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/_JQg7Qvimy8"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                            <figcaption class="figure-caption text-dark mt-2 text-center">
+                                Initial testing of the motor wiring and the motor control code
+                            </figcaption>
+                        </figure>
+
+                        <div class="mb-5">
+                            <h4 class="text-secondary">Web Controller</h4>
+                            <p class="lead">
+                                I also designed and built the embedded Node.js web server and the web interface for the
+                                RC car controller. I modified the Node.js web server we created for one of our class
+                                assignments for the controller. The controller can be accessed form any device connected
+                                to the same network as the BBG.
+                            </p>
+
+                            <p class="lead">
+                                The controller works by sending command messages based on the pressed buttons and
+                                switches on the controller UI. The command messages are sent from the frontend to the
+                                Node.js server, which then checks to see if the command received is valid and has the
+                                correct number of arguments before sending the command to the C backend. Once the
+                                command has been received in the C backend, a success message is returned along with any
+                                requested data to the Node.js server, which then sends commands as necessary to the
+                                frontend to update the controller UI. On load of the controller, the frontend asks the C
+                                backend for the current mode of the RC car (manual or automatic mode) and updates the UI
+                                accordingly. The controller UI can also display the corresponding error message if an
+                                unknown command of the wrong number of command arguments are sent to the Node.js server,
+                                or if the Node.js server or C backend is offline.
+                            </p>
+                        </div>
+
+                        <figure class="figure text-center d-block mx-auto mb-5">
+                            <video width="240" controls>
+                                <source th:src="@{/video/portfolio/rc-car/remote.mp4}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <figcaption class="figure-caption text-dark mt-2 text-center">
+                                Demo of motor control using the web controller
+                            </figcaption>
+                        </figure>
+
+                        <div class="mb-5">
+                            <h4 class="text-secondary">Webcam</h4>
+                            <p class="lead">
+                                I also helped research and build the initial implementation for the webcam. The webcam
+                                was used to give the user a driver view from the RC car. Using FFmpeg, I was able to get
+                                the webcam detected on the BBG. I then proceeded to getting the webcam video feed to
+                                show up on the controller UI. Initially I used JavaScript and WebRTC to get the video
+                                feed from the webcam. While this worked, this method uses the webcam of the device
+                                accessing the controller webpage, thus preventing us from using the BBG connected webcam
+                                unless accessing the controller from the BBG itself. I then switched to using Node.js
+                                libraries to get the webcam display. As I mention in the challenges section below, using
+                                Node.js wouldn't work.
+                            </p>
+                        </div>
+
+                        <div class="mb-5">
+                            <h3 class="text-uppercase text-secondary mb-3">Challenges</h3>
+                            <p class="lead">
+                                One challenge I ran into was getting video feed from the webcam attached to the
+                                BBG to show on the web controller UI (mentioned above). Using Node.js libraries didn't
+                                work since I was not able to get the video feed to show up using the ones I tried.
+                                Additionally, some of the libraries I tried (including OpenCV) were too large for the
+                                remaining space we had on the BBG (space had been used for other Linux libraries that we
+                                nedded for assignments and the code for the assignments as well). As well, we didn't
+                                have the time to learn how to use some of the more complicated libraries which could
+                                have worked for us. We eventually were able to solve this as a group by using custom C
+                                code we found that generates each frame from the webcam and sends it back to the
+                                frontend. To do this, we modified the code and created a seeparate server connection
+                                just for the camera, allowing the camera frame data to be separete from the controller
+                                command data. The Node.js sevrer would listen to the camera server for the camera frame
+                                data and then pass it to the frontend to be displayed.
+                            </p>
+
+                            <p class="lead">
+                                While this solution worked, we ran into an issue with it only working with a wired
+                                network connection. If we tried to run the BBG using the wifi usb we had, the camera
+                                frame data would take up so much of the bandwith that the controller webpage would not
+                                work. One way we could solve this in the future would be to either switch to a higher
+                                bandwidth wifi module, switch to a BBG with wifi, or switch to a bluetooth webcam.
+                            </p>
+                        </div>
+
+                        <figure class="figure d-block mx-auto mb-5 col-lg-6">
+                            <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#webcam"
+                                href="#">
+                                <div class="img-thumbnail fit-content mx-auto">
+                                    <img class="figure-img img-fluid d-block"
+                                        th:src="@{/img/portfolio/rc-car/webcam.jpeg}" alt="">
+                                </div>
+                            </a>
+                            <figcaption class="figure-caption text-dark mt-2 text-center">
+                                Webcam feed being displayed on the web controller
+                            </figcaption>
+                        </figure>
+
+                        <div class="mb-5">
+                            <h3 class="text-uppercase text-secondary mb-3">Reflection</h3>
+                            <p class="lead">
+                                Through this project, I learned how to build an embedded sytem in Linux using C and how
+                                to build a Nod.js web server to communicate with a C backend. I also applied my web
+                                design and web programming skillsto build a simple to use controller for our RC car.
+                                However, there were some features we counldn't complete 100% due to time constraints
+                                such as the webcam not working with a wireless connection. We also couldn't ger the
+                                gyroscope turn angle detection working since the gyroscope we had didn't give us the
+                                data we needed and wasn't able to be implemented in time. In the future, if I were to
+                                keep working on this project, I would like to fix the webcam so it works on a wireless
+                                connection and get the gyroscope turn agle detection working with another gyroscope.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modals -->
+        <div aria-hidden="true" aria-labelledby="rc-care" class="modal fade" id="rc-car" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body m-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block mx-auto"
+                            th:src="@{/img/portfolio/rc-car/rc-car.jpeg}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="webcam" class="modal fade" id="webcam" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body m-3 p-0">
+                        <img class="img-thumbnail img-fluid d-block mx-auto"
+                            th:src="@{/img/portfolio/rc-car/webcam.png}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
