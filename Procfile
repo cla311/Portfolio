@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -Dspring.profiles.active=prod -jar build/libs/chrislouie-portfolio-1.0.jar
+web: java -Dserver.port=${PORT:8080} -Dspring.profiles.active=prod -jar build/libs/chrislouie-portfolio-1.0.jar
