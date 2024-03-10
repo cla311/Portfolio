@@ -24,7 +24,10 @@ public class ProjectService {
 	}
 
 	public Project getProjectByID(String link) {
+		if (link == null || link.equals("")) {
+			throw new IllegalArgumentException("No project id provided.");
+		}
 		return projectRepository.findById(link).orElseThrow(
-				() -> new IllegalArgumentException("No Project with ID " + link));
+				() -> new IllegalArgumentException("No project with id " + link));
 	}
 }
