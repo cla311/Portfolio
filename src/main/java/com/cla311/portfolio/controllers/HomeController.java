@@ -27,7 +27,7 @@ public class HomeController {
 		return "index";
 	}
 
-	@GetMapping("/projects/{project}")
+	@GetMapping("/{project}")
 	public String index(
 			@PathVariable(required = true) String project, Model model) {
 		model.addAttribute("nav_links", mainLinks);
