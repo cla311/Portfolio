@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html th:replace="~{fragments/layout :: layout(~{::title/text()}, ~{::link}, ~{::#content})}">
+<html th:replace="~{fragments/layout :: layout(~{::title/text()}, ~{}, ~{::#content})}">
 
 <head>
-    <title>Christopher Louie | Portfolio</title>
+    <title th:text="|${project.getTitle()} - Christopher Louie|">Christopher Louie</title>
 </head>
 
 <body>

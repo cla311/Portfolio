@@ -2,7 +2,7 @@
 <html th:fragment="layout (title, links, content)" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title th:utext="${title}">Christopher Louie | Portfolio</title>
+    <title th:replace="${title}">Christopher Louie</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" th:href="@{/css/portfolio.min.css}">
     <script th:src="@{/js/portfolio.min.js}"></script>
 
-    <th:block th:replace="${links} ?: ~{}" />
+    <th:block th:replace="${links}" />
 
 </head>
 
