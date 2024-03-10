@@ -67,7 +67,7 @@
 
                     <!-- Portfolio Grid Items -->
                     <div class="row row-cols-1 row-cols-md-3" th:remove="all-but-first">
-                        <div th:each="project : ${project_list}" class="col portfolio-column web-design front-end"
+                        <div th:each="project : ${project_list}" class="col portfolio-column"
                             th:classappend="${project.getCssTags()}">
                             <a class="portfolio-item text-decoration-none mx-auto" th:href="@{|/${project.getLink()}|}">
                                 <img class="img-fluid d-block p-4" th:src="@{|/img/portfolio/${project.getImage()}|}"
