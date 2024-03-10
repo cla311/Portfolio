@@ -16,7 +16,9 @@ java {
 
 repositories {
     mavenCentral()
-    maven { url "https://jitpack.io" }
+    maven {
+        url "https://jitpack.io"
+    }
 }
 
 docker {
@@ -42,10 +44,9 @@ dependencies {
 
     testImplementation "junit:junit:+"
     testImplementation "org.springframework.boot:spring-boot-starter-test"
+    testRuntimeOnly "org.junit.platform:junit-platform-launcher"
 }
 
-gradle.projectsEvaluated {
-   tasks.withType(JavaCompile) {
-        options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
-    }
+test {
+    useJUnitPlatform()
 }
