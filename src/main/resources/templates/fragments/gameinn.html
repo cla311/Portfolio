@@ -10,15 +10,15 @@
                 <div class="row text-dark">
                     <div class="col-md-8 mx-auto">
                         <figure class="figure d-block mx-auto mb-5">
-                            <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#logo"
+                            <a class="modal-img text-decoration-none" data-bs-toggle="modal" data-bs-target="#logo"
                                 href="#">
                                 <div class="img-thumbnail fit-content mx-auto">
-                                    <img class="figure-img img-fluid d-block"
-                                        th:src="@{/img/portfolio/gameinn/gameinn.png}" alt="GameInn Logo">
+                                    <img class="img-header img-fluid d-block"
+                                        th:src="@{/img/portfolio/gameinn/gameinn.png}" alt="GameInn logo">
                                 </div>
                             </a>
                             <figcaption class="figure-caption text-dark mt-2 text-center">
-                                GameInn Logo
+                                GameInn logo
                             </figcaption>
                         </figure>
 
@@ -36,7 +36,7 @@
                             </p>
                             <p class="lead">
                                 <span class="fw-bold">Tools:</span> Java, Spring Boot, HTML5, CSS3, Bootstrap 5,
-                                JavaScript, jQuerry, Ajax, PostgreSQL
+                                JavaScript, jQuery, Ajax, PostgreSQL
                             </p>
                         </div>
 
@@ -44,17 +44,17 @@
                             <h3 class="text-uppercase text-secondary mb-3">Goal/Description</h3>
                             <p class="lead">
                                 In a team of 5, create a Java Spring Boot web app that solves or improves on existing
-                                solutions to a non-trival problem. The app must be hosted on Heroku include a login,
+                                solutions to a non-trivial problem. The app must be hosted on Heroku include a login,
                                 store and retrieve data from the apps Postgres database, have different views for at
                                 least 2 user types, and use data from a Rest API. The app we created was GameInn, a
-                                gaming clip sharer and group finder, whiich solves the following problems:
+                                gaming clip sharer and group finder, which solves the following problems:
                             </p>
 
                             <ul class="lead">
                                 <li>
                                     Looking for clips for a game and being able to easily search for them is difficult
-                                    as there are several sites commonly used to share clips (Facebook, Youtube,Twitch,
-                                    Twitter, etc.), and clips are not guarenteed to be crossposted between these sites.
+                                    as there are several sites commonly used to share clips (Facebook, Youtube, Twitch,
+                                    Twitter, etc.), and clips are not guaranteed to be cross-posted between these sites.
                                 </li>
                                 <li>
                                     While several group finder apps exist, no group finder exists where you can also see
@@ -65,11 +65,11 @@
                             </ul>
 
                             <p class="lead">
-                                GameInn currently supports 3 types of users: guests, registerd users, and admin. Guests
-                                can only view the clips list and group finder list. Registerd users have all the
-                                privalages of guests, but can additionally
-                                add/edit their own clips and create/join groups. Admins have all the privaledges of
-                                registered users, but can additionally delete any clips and groups.
+                                GameInn currently supports 3 types of users: guests, registered users, and admin. Guests
+                                can only view the clips list and group finder list. Registered users have all the
+                                privileges of guests, but can additionally add/edit their own clips and create/join
+                                groups. Admins have all the privileges of registered users, but can additionally delete
+                                any clips and groups.
                             </p>
                         </div>
 
@@ -88,15 +88,16 @@
                         </div>
 
                         <figure class="figure d-block mx-auto mb-5">
-                            <a class="modal-image text-decoration-none" data-bs-toggle="modal" data-bs-target="#clip"
+                            <a class="modal-img text-decoration-none" data-bs-toggle="modal" data-bs-target="#clip"
                                 href="#">
                                 <div class="img-thumbnail fit-content mx-auto">
-                                    <img class="figure-img img-fluid d-block"
-                                        th:src="@{/img/portfolio/gameinn/gameinn_clips_guest.png}" alt="">
+                                    <img class="img-fluid d-block"
+                                        th:src="@{/img/portfolio/gameinn/gameinn_clips_guest.png}"
+                                        alt="Guest view homepage, which is the clip list page">
                                 </div>
                             </a>
                             <figcaption class="figure-caption text-dark mt-2 text-center">
-                                Guest view of the GameInn homepage, which is clip list page
+                                Guest view homepage, which is the clip list page
                             </figcaption>
                         </figure>
 
@@ -105,10 +106,10 @@
                             <p class="lead">
                                 One challenge I ran into was getting the list of game titles for the clips and group
                                 finder. Originally, we used the IGDB API to get the game titles. However, since IGDB
-                                uses user submitted data, there were many games listed that would not be usefull for use
+                                uses user submitted data, there were many games listed that would not be useful for use
                                 in our app (foreign games, single player games, old games not played anymore, etc.). The
                                 solution that my team and I came up with was to switch to the Twitch API, since Twitch
-                                keeps their game list up-to-date with the most relevent games, old and new. We were
+                                keeps their game list up-to-date with the most relevant games, old and new. We were
                                 still able to use the IGDB API Java wrapper for authentication since IGDB is owned by
                                 Twitch and uses Twitch authentication for API calls.
                             </p>
@@ -117,11 +118,12 @@
                         <div class="row mb-5">
                             <div class="col-lg mx-auto">
                                 <figure class="figure d-block mx-auto">
-                                    <a class="modal-image text-decoration-none" data-bs-toggle="modal"
+                                    <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#addGroupUI" href="#">
                                         <div class="img-thumbnail fit-content mx-auto">
-                                            <img class="figure-img img-fluid d-block"
-                                                th:src="@{/img/portfolio/gameinn/gameinn_addGroupUI.png}" alt="">
+                                            <img class="img-fluid d-block"
+                                                th:src="@{/img/portfolio/gameinn/gameinn_addGroupUI.png}"
+                                                alt="Add/edit group page in add mode - UI mockup">
                                         </div>
                                     </a>
                                     <figcaption class="figure-caption text-dark mt-2 text-center">
@@ -132,11 +134,12 @@
 
                             <div class="col-lg mx-auto">
                                 <figure class="figure d-block mx-auto">
-                                    <a class="modal-image text-decoration-none" data-bs-toggle="modal"
+                                    <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#addGroup" href="#">
                                         <div class="img-thumbnail fit-content mx-auto">
-                                            <img class="figure-img img-fluid d-block"
-                                                th:src="@{/img/portfolio/gameinn/gameinn_addGroup_user.png}" alt="">
+                                            <img class="img-fluid d-block"
+                                                th:src="@{/img/portfolio/gameinn/gameinn_addGroup_user.png}"
+                                                alt="Add/edit group page in add mode - Regular user view">
                                         </div>
                                     </a>
                                     <figcaption class="figure-caption text-dark mt-2 text-center">
@@ -152,15 +155,15 @@
                                 platform we wanted to use either has a different embed code from the other platforms or
                                 no embed code at all. Additionally, some platforms only allow you to embed the entire
                                 post and not just the video/clip. While it would have been easier to embed the clips and
-                                posts using each platforms API, there was not enough time to learn each platfroms API
+                                posts using each platforms API, there was not enough time to learn each platforms API
                                 and set up any necessary authentication. As well, some platforms require approval before
                                 using their API, which we did not have time to wait for and has the potential for us to
                                 be denied access. I solved this issue by limiting the platforms to just YouTube, Twitch,
                                 Twitter, and Reddit, since either the embed code was easy to generate on the spot
                                 (Twitter) or the details needed for the embed code were easy to obtain (YouTube, Twitch,
                                 Reddit). After confirming the link entered matches the valid link types for the selected
-                                platform, the embed code is created in the back end and stored in the databse, making it
-                                easy to retrieve.
+                                platform, the embed code is created in the back end and stored in the database, making
+                                it easy to retrieve.
                             </p>
                         </div>
 
@@ -178,26 +181,28 @@
                         <div class="row mb-5">
                             <div class="col-lg mx-auto">
                                 <figure class="figure d-block mx-auto">
-                                    <a class="modal-image text-decoration-none" data-bs-toggle="modal"
+                                    <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#editProfile" href="#">
                                         <div class="img-thumbnail fit-content mx-auto">
-                                            <img class="figure-img img-fluid d-block"
-                                                th:src="@{/img/portfolio/gameinn/gameinn_editProfile.png}" alt="">
+                                            <img class="img-fluid d-block"
+                                                th:src="@{/img/portfolio/gameinn/gameinn_editProfile.png}"
+                                                alt="Edit profile page - Only accessible when logged in">
                                         </div>
                                     </a>
                                     <figcaption class="figure-caption text-dark mt-2 text-center">
-                                        Edit profile page - Only acessable when logged in
+                                        Edit profile page - Only accessible when logged in
                                     </figcaption>
                                 </figure>
                             </div>
 
                             <div class="col-lg mx-auto">
                                 <figure class="figure d-block mx-auto">
-                                    <a class="modal-image text-decoration-none" data-bs-toggle="modal"
+                                    <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#groupFinder" href="#">
                                         <div class="img-thumbnail fit-content mx-auto">
-                                            <img class="figure-img img-fluid d-block"
-                                                th:src="@{/img/portfolio/gameinn/gameinn_groupFinder.png}" alt="">
+                                            <img class="img-fluid d-block"
+                                                th:src="@{/img/portfolio/gameinn/gameinn_groupFinder.png}"
+                                                alt="Group finder list - Regular user view">
                                         </div>
                                     </a>
                                     <figcaption class="figure-caption text-dark mt-2 text-center">
@@ -212,10 +217,10 @@
                             <p class="lead">
                                 Through this project, I learned how to use Java for web design, Spring Boot, and
                                 Postgres. I also applied my web design and web programming skills, resulting in a simple
-                                to use clip sharer and group finder. However, there were some features we counldn't
+                                to use clip sharer and group finder. However, there were some features we couldn't
                                 implement due to time, such as selecting from the queued users to join your group and
                                 notifying them, viewing other user profiles, add a built-in chat system, and clip tags.
-                                In the future, I would like to implement the missing features, add additonal clip
+                                In the future, I would like to implement the missing features, add additional clip
                                 platforms, and continue to update this app with hopes of making official releasing it
                                 once it's more complete.
                             </p>
@@ -226,115 +231,27 @@
         </section>
 
         <!-- Modals -->
-        <div aria-hidden="true" aria-labelledby="logo" class="modal fade" id="logo" role="dialog" tabindex="-1">
-            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                    <!-- Modal Body -->
-                    <div class="modal-body m-3 p-0">
-                        <img class="img-thumbnail img-fluid d-block mx-auto"
-                            th:src="@{/img/portfolio/gameinn/gameinn.png}" alt="">
-                    </div>
-                </div>
-            </div>
+        <div th:include="~{fragments/modal :: modal('logo', 'gameinn/gameinn.png', 'GameInn logo')}">
         </div>
 
-        <div aria-hidden="true" aria-labelledby="clip" class="modal fade" id="clip" role="dialog" tabindex="-1">
-            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                    <!-- Modal Body -->
-                    <div class="modal-body m-3 p-0">
-                        <img class="img-thumbnail img-fluid d-block mx-auto"
-                            th:src="@{/img/portfolio/gameinn/gameinn_clips_guest.png}" alt="">
-                    </div>
-                </div>
-            </div>
+        <div
+            th:include="~{fragments/modal :: modal('clip', 'gameinn/gameinn_clips_guest.png', 'Guest view homepage, which is the clip list page')}">
         </div>
 
-        <div aria-hidden="true" aria-labelledby="addGroupUI" class="modal fade" id="addGroupUI" role="dialog"
-            tabindex="-1">
-            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                    <!-- Modal Body -->
-                    <div class="modal-body m-3 p-0">
-                        <img class="img-thumbnail img-fluid d-block mx-auto"
-                            th:src="@{/img/portfolio/gameinn/gameinn_addGroupUI.png}" alt="">
-                    </div>
-                </div>
-            </div>
+        <div
+            th:include="~{fragments/modal :: modal('addGroupUI', 'gameinn/gameinn_addGroupUI.png', 'Add/edit group page in add mode - UI mockup')}">
         </div>
 
-        <div aria-hidden="true" aria-labelledby="addGroup" class="modal fade" id="addGroup" role="dialog" tabindex="-1">
-            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                    <!-- Modal Body -->
-                    <div class="modal-body m-3 p-0">
-                        <img class="img-thumbnail img-fluid d-block mx-auto"
-                            th:src="@{/img/portfolio/gameinn/gameinn_addGroup_user.png}" alt="">
-                    </div>
-                </div>
-            </div>
+        <div
+            th:include="~{fragments/modal :: modal('addGroup', 'gameinn/gameinn_addGroup_user.png', 'Add/edit group page in add mode - Regular user view')}">
         </div>
 
-        <div aria-hidden="true" aria-labelledby="editProfile" class="modal fade" id="editProfile" role="dialog"
-            tabindex="-1">
-            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                    <!-- Modal Body -->
-                    <div class="modal-body m-3 p-0">
-                        <img class="img-thumbnail img-fluid d-block mx-auto"
-                            th:src="@{/img/portfolio/gameinn/gameinn_editProfile.png}" alt="">
-                    </div>
-                </div>
-            </div>
+        <div
+            th:include="~{fragments/modal :: modal('editProfile', 'gameinn/gameinn_editProfile.png', 'Edit profile page - Only accessible when logged in')}">
         </div>
 
-        <div aria-hidden="true" aria-labelledby="groupFinder" class="modal fade" id="groupFinder" role="dialog"
-            tabindex="-1">
-            <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                    <!-- Modal Body -->
-                    <div class="modal-body m-3 p-0">
-                        <img class="img-thumbnail img-fluid d-block mx-auto"
-                            th:src="@{/img/portfolio/gameinn/gameinn_groupFinder.png}" alt="">
-                    </div>
-                </div>
-            </div>
+        <div
+            th:include="~{fragments/modal :: modal('groupFinder', 'gameinn/gameinn_groupFinder.png', 'Group finder list - Regular user view')}">
         </div>
     </main>
 </body>
