@@ -33,5 +33,5 @@ public class Project {
 	private String endDate;
 
 	@Id
-	private String link;
+	private String url;
 }
