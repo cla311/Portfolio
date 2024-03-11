@@ -2,9 +2,12 @@
 <html th:fragment="layout (title, links, content)" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title th:replace="${title}">Christopher Louie</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title th:replace="${title}">Christopher Louie</title>
+    <link rel="icon" type="image/x-icon" th:href="@{favicon.ico}">
+
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
     <script th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
     <script src="https://kit.fontawesome.com/fd77361902.js" crossorigin="anonymous"></script>
