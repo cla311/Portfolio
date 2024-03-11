@@ -12,7 +12,7 @@
                         <figure class="figure d-block mx-auto mb-5">
                             <a class="modal-img text-decoration-none" data-bs-toggle="modal" data-bs-target="#logo"
                                 href="#">
-                                <div class="img-header img-thumbnail fit-content mx-auto">
+                                <div class="modal-image fit-content mx-auto">
                                     <img class="img-fluid d-block"
                                         th:src="@{/img/portfolio/publicsquare/publicsquare.png}"
                                         alt="SFU Public Square logo">
@@ -84,7 +84,7 @@
                         <figure class="figure d-block mx-auto mb-5 col-lg-9">
                             <a class="modal-img text-decoration-none" data-bs-toggle="modal" data-bs-target="#homepage"
                                 href="#">
-                                <div class="img-thumbnail fit-content mx-auto">
+                                <div class="modal-image fit-content mx-auto">
                                     <img class="img-fluid d-block" th:src="@{/img/portfolio/publicsquare/homepage.png}"
                                         alt="New SFU Public Square homepage">
                                 </div>
@@ -117,7 +117,7 @@
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#summit2014Old" href="#">
-                                        <div class="img-thumbnail fit-content mx-auto">
+                                        <div class="modal-image fit-content mx-auto">
                                             <img class="img-fluid d-block"
                                                 th:src="@{/img/portfolio/publicsquare/2014_summit_old.png}"
                                                 alt="2014 Community Summit landing page - Old website">
@@ -133,7 +133,7 @@
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#summit2014" href="#">
-                                        <div class="img-thumbnail fit-content mx-auto">
+                                        <div class="modal-image fit-content mx-auto">
                                             <img class="img-fluid d-block"
                                                 th:src="@{/img/portfolio/publicsquare/2014_summit.png}"
                                                 alt="2014 Community Summit landing page - New website">
@@ -190,7 +190,7 @@
                                 <figure class="figure d-block mx-auto mb-3">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#homeFeatured" href="#">
-                                        <div class="img-thumbnail fit-content mx-auto">
+                                        <div class="modal-image fit-content mx-auto">
                                             <img class="img-fluid d-block"
                                                 th:src="@{/img/portfolio/publicsquare/home_featured.png}"
                                                 alt="Homepage featured content lists">
@@ -204,7 +204,7 @@
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#rsvpBar" href="#">
-                                        <div class="img-thumbnail fit-content mx-auto">
+                                        <div class="modal-image fit-content mx-auto">
                                             <img class="img-fluid d-block"
                                                 th:src="@{/img/portfolio/publicsquare/rsvp_bar.png}"
                                                 alt="Custom RSVP bar for upcoming events">
@@ -220,7 +220,7 @@
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#accordion" href="#">
-                                        <div class="img-thumbnail fit-content mx-auto">
+                                        <div class="modal-image fit-content mx-auto">
                                             <img class="img-fluid d-block"
                                                 th:src="@{/img/portfolio/publicsquare/accordion_columns.png}"
                                                 alt="Example of an accordion with images in columns">
@@ -255,15 +255,15 @@
         </div>
 
         <div
-            th:include="~{fragments/modal :: modal('homepage', 'publicsquare/homepage_full.png', 'New SFU Public Square homepage')}">
+            th:include="~{fragments/modal :: modal('homepage', 'publicsquare/homepage.png', 'New SFU Public Square homepage')}">
         </div>
 
         <div
-            th:include="~{fragments/modal :: modal('summit2014Old', 'publicsquare/2014_summit_old_full.png', '2014 Community Summit landing page - Old website')}">
+            th:include="~{fragments/modal :: modal('summit2014Old', 'publicsquare/2014_summit_old.png', '2014 Community Summit landing page - Old website')}">
         </div>
 
         <div
-            th:include="~{fragments/modal :: modal('summit2014', 'publicsquare/2014_summit_full.png', '2014 Community Summit landing page - New website')}">
+            th:include="~{fragments/modal :: modal('summit2014', 'publicsquare/2014_summit.png', '2014 Community Summit landing page - New website')}">
         </div>
 
         <div
@@ -275,7 +275,7 @@
         </div>
 
         <div
-            th:include="~{fragments/modal :: modal('accordion', 'publicsquare/accordion_columns_full.png', 'Example of an accordion with images in columns')}">
+            th:include="~{fragments/modal :: modal('accordion', 'publicsquare/accordion_columns.png', 'Example of an accordion with images in columns')}">
         </div>
     </main>
 </body>
