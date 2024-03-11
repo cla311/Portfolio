@@ -12,9 +12,9 @@
                         <figure class="figure d-block mx-auto mb-5">
                             <a class="modal-img text-decoration-none" data-bs-toggle="modal" data-bs-target="#logo"
                                 href="#">
-                                <div class="img-thumbnail fit-content mx-auto">
-                                    <img class="img-header img-fluid d-block"
-                                        th:src="@{/img/portfolio/newegg/newegg_ca.png}" alt="Newegg logo">
+                                <div class="modal-image fit-content mx-auto">
+                                    <img class="img-fluid d-block" th:src="@{/img/portfolio/newegg/newegg_ca.jpeg}"
+                                        alt="Newegg logo">
                                 </div>
                             </a>
                             <figcaption class="figure-caption text-dark mt-2 text-center">
@@ -63,10 +63,10 @@
                             <div class="col-lg mx-auto">
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
-                                        data-bs-target="#oldCheckout" href="#">
-                                        <div class="img-thumbnail fit-content mx-auto">
+                                        data-bs-target="#checkout_old" href="#">
+                                        <div class="modal-image fit-content mx-auto">
                                             <img class="img-fluid d-block"
-                                                th:src="@{/img/portfolio/newegg/newegg_oldCheckout.png}"
+                                                th:src="@{/img/portfolio/newegg/newegg_checkout_old.png}"
                                                 alt="Checkout page - Early version">
                                         </div>
                                     </a>
@@ -80,7 +80,7 @@
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#checkout" href="#">
-                                        <div class="img-thumbnail fit-content mx-auto">
+                                        <div class="modal-image fit-content mx-auto">
                                             <img class="img-fluid d-block"
                                                 th:src="@{/img/portfolio/newegg/newegg_checkout.png}"
                                                 alt="Checkout page - Final version">
@@ -109,7 +109,7 @@
                         <figure class="figure d-block mx-auto mb-5">
                             <a class="modal-img text-decoration-none" data-bs-toggle="modal" data-bs-target="#products"
                                 href="#">
-                                <div class="img-thumbnail fit-content mx-auto">
+                                <div class="modal-image fit-content mx-auto">
                                     <img class="img-fluid d-block" th:src="@{/img/portfolio/newegg/newegg_products.png}"
                                         alt="Products page with the image gallery">
                                 </div>
@@ -135,7 +135,7 @@
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#home" href="#">
-                                        <div class="img-thumbnail fit-content mx-auto">
+                                        <div class="modal-image fit-content mx-auto">
                                             <img class="img-fluid d-block"
                                                 th:src="@{/img/portfolio/newegg/newegg_home.png}"
                                                 alt="Homepage with the featured sale banner and featured products showcase">
@@ -151,7 +151,7 @@
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#detail" href="#">
-                                        <div class="img-thumbnail fit-content mx-auto">
+                                        <div class="modal-image fit-content mx-auto">
                                             <img class="img-fluid d-block"
                                                 th:src="@{/img/portfolio/newegg/newegg_detail.png}"
                                                 alt="Example product details page">
@@ -182,11 +182,11 @@
         </section>
 
         <!-- Modals -->
-        <div th:include="~{fragments/modal :: modal('logo', 'newegg/newegg_ca.png', 'Newegg logo')}">
+        <div th:include="~{fragments/modal :: modal('logo', 'newegg/newegg_ca.jpeg', 'Newegg logo')}">
         </div>
 
         <div
-            th:include="~{fragments/modal :: modal('oldCheckout', 'newegg/newegg_oldCheckoutFull.png', 'Checkout page - Early version')}">
+            th:include="~{fragments/modal :: modal('checkout_old', 'newegg/newegg_checkout_old_full.png', 'Checkout page - Early version')}">
         </div>
 
         <div
@@ -194,7 +194,7 @@
         </div>
 
         <div
-            th:include="~{fragments/modal :: modal('products', 'newegg/newegg_productsFull.png', 'Products page with the image gallery - Final version')}">
+            th:include="~{fragments/modal :: modal('products', 'newegg/newegg_products_full.png', 'Products page with the image gallery - Final version')}">
         </div>
 
         <div

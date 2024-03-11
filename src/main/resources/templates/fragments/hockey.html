@@ -12,9 +12,9 @@
                         <figure class="figure d-block mx-auto mb-5">
                             <a class="modal-img text-decoration-none" data-bs-toggle="modal" data-bs-target="#logo"
                                 href="#">
-                                <div class="img-thumbnail fit-content mx-auto">
-                                    <img class="img-header img-fluid d-block"
-                                        th:src="@{/img/portfolio/hockey/hockey.png}" alt="NHL Stats Almanac logo">
+                                <div class="modal-image fit-content mx-auto">
+                                    <img class="img-fluid d-block" th:src="@{/img/portfolio/hockey/hockey.png}"
+                                        alt="NHL Stats Almanac logo">
                                 </div>
                             </a>
                             <figcaption class="figure-caption text-dark mt-2 text-center">
@@ -65,7 +65,7 @@
                         <figure class="figure d-block mx-auto mb-5">
                             <a class="modal-img text-decoration-none" data-bs-toggle="modal" data-bs-target="#home"
                                 href="#">
-                                <div class="img-thumbnail fit-content mx-auto">
+                                <div class="modal-image fit-content mx-auto">
                                     <img class="img-fluid d-block" th:src="@{/img/portfolio/hockey/hockey_home.png}"
                                         alt="Homepage with the user created fantasy teams list and the featured players and teams list">
                                 </div>
@@ -95,9 +95,9 @@
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#oldSearch" href="#">
-                                        <div class="img-thumbnail fit-content mx-auto">
+                                        <div class="modal-image fit-content mx-auto">
                                             <img class="img-fluid d-block"
-                                                th:src="@{/img/portfolio/hockey/hockey_oldSearch.png}"
+                                                th:src="@{/img/portfolio/hockey/hockey_search_old.png}"
                                                 alt="Player and team search page - First version with the search query displayed for testing">
                                         </div>
                                     </a>
@@ -111,7 +111,7 @@
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#search" href="#">
-                                        <div class="img-thumbnail fit-content mx-auto">
+                                        <div class="modal-image fit-content mx-auto">
                                             <img class="img-fluid d-block"
                                                 th:src="@{/img/portfolio/hockey/hockey_search.png}"
                                                 alt="Player and team search page - Final version">
@@ -149,7 +149,7 @@
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#player" href="#">
-                                        <div class="img-thumbnail fit-content mx-auto">
+                                        <div class="modal-image fit-content mx-auto">
                                             <img class="img-fluid d-block"
                                                 th:src="@{/img/portfolio/hockey/hockey_player.png}"
                                                 alt="Player stats page">
@@ -165,7 +165,7 @@
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#fantasy" href="#">
-                                        <div class="img-thumbnail fit-content mx-auto">
+                                        <div class="modal-image fit-content mx-auto">
                                             <img class="img-fluid d-block"
                                                 th:src="@{/img/portfolio/hockey/hockey_fantasy.png}"
                                                 alt="User created fantasy team roster page">
@@ -203,11 +203,11 @@
         </div>
 
         <div
-            th:include="~{fragments/modal :: modal('oldSearch', 'hockey/hockey_oldSearch.png', 'Player and team search page - First version with the search query displayed for testing')}">
+            th:include="~{fragments/modal :: modal('oldSearch', 'hockey/hockey_search_old.png', 'Player and team search page - First version with the search query displayed for testing')}">
         </div>
 
         <div
-            th:include="~{fragments/modal :: modal('search', 'hockey/hockey_searchFull.png', 'Player and team search page - Final version')}">
+            th:include="~{fragments/modal :: modal('search', 'hockey/hockey_search_full.png', 'Player and team search page - Final version')}">
         </div>
 
         <div th:include="~{fragments/modal :: modal('player', 'hockey/hockey_player.png', 'Player stats page')}">

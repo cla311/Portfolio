@@ -199,6 +199,8 @@ a.text-secondary:hover {
 
 .portfolio-item img,
 .modal-img img {
+    max-width: min(1200px, 100%);
+    max-height: min(1200px, 100%);
     transition: all 0.25s ease-in-out;
 }
 
@@ -208,8 +210,8 @@ a.text-secondary:hover {
     opacity: 0.3;
 }
 
-.img-header {
-    max-height: 350px;
+.modal-img-full {
+    max-height: 80vh;
 }
 
 .fit-content {
@@ -288,11 +290,5 @@ a.text-secondary:hover {
 
     .masthead .masthead-subheading {
         font-size: 1.5rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    .modal-xl {
-        width: fit-content;
     }
 }
