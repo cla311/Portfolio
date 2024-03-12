@@ -5,7 +5,7 @@
     <!-- Carousel -->
     <div th:fragment="carousel (id)" th:with="remove=${remove} ?: none" th:id="'carouselLimeLite'+ ${id}"
         class="carousel slide mx-auto" data-bs-theme="dark">
-        <div>
+        <div class="position-relative">
             <a th:remove="${remove}" class="modal-img text-decoration-none" data-bs-toggle="modal"
                 data-bs-target="#limelite" href="#">
                 <div class="carousel-inner">
