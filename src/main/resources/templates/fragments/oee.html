@@ -12,7 +12,7 @@
                         <figure class="figure d-block mx-auto">
                             <a class="modal-img text-decoration-none" data-bs-toggle="modal" data-bs-target="#logo"
                                 href="#">
-                                <div class="modal-image fit-content mx-auto">
+                                <div class="modal-img fit-content mx-auto">
                                     <img class="img-fluid d-block" th:src="@{/img/portfolio/oee/oee.png}"
                                         alt="Outdoor Equipment Exchange logo">
                                 </div>
@@ -96,7 +96,7 @@
                         <figure class="figure d-block mx-auto mb-5">
                             <a class="modal-img text-decoration-none" data-bs-toggle="modal" data-bs-target="#landing"
                                 href="#">
-                                <div class="modal-image fit-content mx-auto">
+                                <div class="modal-img fit-content mx-auto">
                                     <img class="img-fluid d-block" th:src="@{/img/portfolio/oee/oee_landing.png}"
                                         alt="Landing page - Final version if the users are not logged in or are logged out">
                                 </div>
@@ -124,7 +124,7 @@
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#wireframes" href="#">
-                                        <div class="modal-image fit-content mx-auto">
+                                        <div class="modal-img fit-content mx-auto">
                                             <img class="img-fluid d-block"
                                                 th:src="@{/img/portfolio/oee/oee_wireframes.png}"
                                                 alt="Some initial UI design wireframes">
@@ -140,7 +140,7 @@
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#prototype" href="#">
-                                        <div class="modal-image fit-content mx-auto">
+                                        <div class="modal-img fit-content mx-auto">
                                             <img class="img-fluid d-block"
                                                 th:src="@{/img/portfolio/oee/oee_prototype.png}"
                                                 alt="Some final prototype designs with interactivity added">
@@ -186,7 +186,7 @@
                                 <figure class="figure d-block mx-auto mb-5">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#home" href="#">
-                                        <div class="modal-image fit-content mx-auto">
+                                        <div class="modal-img fit-content mx-auto">
                                             <img class="img-fluid d-block" th:src="@{/img/portfolio/oee/oee_home.png}"
                                                 alt="Homepage - Final version">
                                         </div>
@@ -201,7 +201,7 @@
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#messages" href="#">
-                                        <div class="modal-image fit-content mx-auto">
+                                        <div class="modal-img fit-content mx-auto">
                                             <img class="img-fluid d-block"
                                                 th:src="@{/img/portfolio/oee/oee_messages.png}"
                                                 alt="User messages list page - Final version">
@@ -232,26 +232,26 @@
         </section>
 
         <!-- Modals -->
-        <div th:include="~{fragments/modal :: modal('logo', 'oee/oee.png', 'Outdoor Equipment Exchange logo')}">
+        <div th:replace="~{fragments/modal :: modal('logo', 'oee/oee.png', 'Outdoor Equipment Exchange logo')}">
         </div>
 
         <div
-            th:include="~{fragments/modal :: modal('landing', 'oee/oee_landing.png', 'Landing page - Final version if the users are not logged in or are logged out')}">
+            th:replace="~{fragments/modal :: modal('landing', 'oee/oee_landing.png', 'Landing page - Final version if the users are not logged in or are logged out')}">
         </div>
 
         <div
-            th:include="~{fragments/modal :: modal('wireframes', 'oee/oee_wireframes.png', 'Some initial UI design wireframes')}">
+            th:replace="~{fragments/modal :: modal('wireframes', 'oee/oee_wireframes.png', 'Some initial UI design wireframes')}">
         </div>
 
         <div
-            th:include="~{fragments/modal :: modal('prototype', 'oee/oee_prototype.png', 'Some final prototype designs with interactivity added')}">
+            th:replace="~{fragments/modal :: modal('prototype', 'oee/oee_prototype.png', 'Some final prototype designs with interactivity added')}">
         </div>
 
-        <div th:include="~{fragments/modal :: modal('home', 'oee/oee_home.png', 'Homepage - Final version')}">
+        <div th:replace="~{fragments/modal :: modal('home', 'oee/oee_home.png', 'Homepage - Final version')}">
         </div>
 
         <div
-            th:include="~{fragments/modal :: modal('messages', 'oee/oee_messages.png', 'User messages list page - Final version')}">
+            th:replace="~{fragments/modal :: modal('messages', 'oee/oee_messages.png', 'User messages list page - Final version')}">
         </div>
     </main>
 </body>
