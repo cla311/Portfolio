@@ -214,6 +214,15 @@ a.text-secondary:hover {
     max-height: 80vh;
 }
 
+.carousel-thumbnails {
+    position: static;
+}
+
+.carousel-thumbnails button {
+    position: static;
+    width: max-content;
+}
+
 .fit-content {
     width: fit-content;
 }
