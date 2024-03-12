@@ -3,8 +3,8 @@
 
 <body>
     <!-- Modal -->
-    <div th:fragment="modal (id, image, alt)" aria-hidden="true" th:aria-labelledby="${id}" class="modal fade"
-        th:id="${id}" tabindex="-1">
+    <div th:fragment="modal (id, image, alt)" th:with="modalContent=${modalContent} ?: _" aria-hidden="true"
+        th:aria-labelledby="${id}" class="modal fade" th:id="${id}" tabindex="-1">
         <div class="modal-dialog modal-xl modal-dialog-centered fit-content" role="document">
             <div class="modal-content">
                 <!-- Modal Header -->
