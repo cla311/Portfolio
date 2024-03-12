@@ -199,8 +199,10 @@ a.text-secondary:hover {
 
 .portfolio-item img,
 .modal-img img {
-    max-width: min(1200px, 100%);
-    max-height: min(1200px, 100%);
+    max-width: 1200px;
+    max-height: 1200px;
+    width: 100%;
+    height: 100%;
     transition: all 0.25s ease-in-out;
 }
 
@@ -214,13 +216,25 @@ a.text-secondary:hover {
     max-height: 80vh;
 }
 
+.carousel,
+.carousel-item img {
+    max-width: 500px;
+    width: 100%;
+}
+
 .carousel-thumbnails {
     position: static;
 }
 
-.carousel-thumbnails button {
-    position: static;
+.carousel-thumbnails [data-bs-target] {
+    max-width: 70px;
     width: max-content;
+    height: max-content;
+}
+
+.carousel-thumbnails img {
+    max-width: 70px;
+    width: 100%;
 }
 
 .fit-content {
