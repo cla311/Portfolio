@@ -24,7 +24,7 @@
     <link rel="stylesheet" th:href="@{/css/portfolio.min.css}">
     <script th:src="@{/js/portfolio.min.js}"></script>
 
-    <th:block th:replace="${links}" />
+    <th:block th:replace="${links} ?: ~{}" />
 
 </head>
 

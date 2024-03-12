@@ -1,12 +1,8 @@
 <!DOCTYPE html>
-<html th:replace="~{fragments/layout :: layout(~{::title}, ~{}, ~{::#content})}">
-
-<head>
-    <title>Christopher Louie</title>
-</head>
+<html th:replace="~{fragments/layout :: layout(_, ~{::link}, ~{::#content})}">
 
 <body>
-    <div id="content" th:remove="tag">
+    <th:block id="content">
         <!-- Masthead -->
         <header class="masthead bg-primary text-center">
             <div class="container col-md-8 d-flex align-items-center flex-column">
@@ -152,7 +148,7 @@
                 </div>
             </section>
         </main>
-    </div>
+    </th:block>
 </body>
 
 </html>
