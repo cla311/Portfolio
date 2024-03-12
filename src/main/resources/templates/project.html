@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html th:replace="~{fragments/layout :: layout(~{::title}, ~{::link}, ~{::#content})}">
 
-<head th:object="${project}">
-    <title th:text="|*{getTitle()} - Christopher Louie|">Christopher Louie</title>
-    <th:block th:replace="~{@{'fragments/' + *{getUrl()}} :: *{getUrl()}} + 'Links'" />
+<head>
+    <title th:text="|${project.getTitle()} - Christopher Louie|">Christopher Louie</title>
+    <th:block th:replace="~{@{'fragments/' + ${project.getUrl()}} :: ${project.getUrl()}} + 'Links'" />
 </head>
 
 <body>

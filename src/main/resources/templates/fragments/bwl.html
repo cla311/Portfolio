@@ -17,15 +17,15 @@
                 <div class="row text-dark">
                     <div class="col-md-8 mx-auto">
                         <figure class="figure d-block mx-auto mb-5">
-                            <a class="modal-img text-decoration-none" data-bs-toggle="modal" data-bs-target="#limelite"
-                                href="#">
-                                <div class="modal-img fit-content mx-auto">
-                                    <th:block th:replace="~{fragments/carousel/limelite :: carousel('A')}">
+                            <div class="fit-content mx-auto">
+                                <th:block th:replace="~{fragments/carousels/limelite :: carousel('A')}">
+                                    <a class="modal-img text-decoration-none" data-bs-toggle="modal"
+                                        data-bs-target="#limelite" href="#">
                                         <img class="img-fluid d-block" th:src="@{/img/portfolio/bwl/bwl.png}"
                                             alt="Better Way Lighting logo">
-                                    </th:block>
-                                </div>
-                            </a>
+                                    </a>
+                                </th:block>
+                            </div>
                         </figure>
 
                         <div class="mb-5">
@@ -354,8 +354,8 @@
 
         <!-- Modals -->
         <!-- Replace with carousel image modals-->
-        <div th:replace="~{fragments/modal :: modal('limelite', 'bwl/bwl.png', 'Better Way Lighting logo')}"
-            th:with="modalContent = ~{fragments/carousel/limelite :: carousel('B')}">
+        <div
+            th:replace="~{fragments/modal :: modal(id='limelite', image='bwl/bwl.png', alt='Better Way Lighting logo', modalContent=~{fragments/carousels/limelite :: carousel(id='B', remove='tag')})}">
         </div>
 
         <div th:replace="~{fragments/modal :: modal('cctMode', 'bwl/cct_mode.png', 'CCT Mode - Initial mockups')}">
