@@ -8,7 +8,7 @@ $(function () {
 
   // Auto scroll to section if page was loaded with an anchor link in the url
   autoScroll();
-  // Scroll to corisponding section when a navbar link is clicked
+  // Scroll to corresponding section when a navbar link is clicked
   $(".js-scroll-trigger").each(function () {
     var menuItem = $(this);
     menuItem.click(function () {
@@ -67,7 +67,7 @@ $(function () {
 
 // Get current year
 function getCurrentYear() {
-  thisYear = new Date().getFullYear();
+  var thisYear = new Date().getFullYear();
   $(".current-year").text(thisYear);
 }
 
