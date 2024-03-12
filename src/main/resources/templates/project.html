@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html th:replace="~{fragments/layout :: layout(~{::title/text()}, ~{}, ~{::#content})}">
+<html th:replace="~{fragments/layout :: layout(~{::title}, ~{::link}, ~{::#content})}">
 
-<head>
-    <title th:text="|${project.getTitle()} - Christopher Louie|">Christopher Louie</title>
+<head th:object="${project}">
+    <title th:text="|*{getTitle()} - Christopher Louie|">Christopher Louie</title>
+    <th:block th:replace="~{@{'fragments/' + *{getUrl()}} :: *{getUrl()}} + 'Links'" />
 </head>
 
 <body>
-    <div id="content" th:remove="tag" th:object="${project}">
+    <th:block id="content" th:object="${project}">
         <!-- Masthead -->
         <header class="masthead bg-primary text-center">
             <div class="container col-md-8 d-flex align-items-center flex-column">
@@ -36,7 +37,7 @@
                 </div>
             </section>
         </main>
-    </div>
+    </th:block>
 </body>
 
 </html>
