@@ -12,7 +12,7 @@
                         <figure class="figure d-block mx-auto mb-5 col-lg-8">
                             <a class="modal-img text-decoration-none" data-bs-toggle="modal" data-bs-target="#rcCar"
                                 href="#">
-                                <div class="modal-image fit-content mx-auto">
+                                <div class="modal-img fit-content mx-auto">
                                     <img class="img-fluid d-block" th:src="@{/img/portfolio/rc_car/rc_car.jpeg}"
                                         alt="Development version of the RC car without the webcam or ultrasonic sensors">
                                 </div>
@@ -182,7 +182,7 @@
                         <figure class="figure d-block mx-auto mb-5 col-lg-6">
                             <a class="modal-img text-decoration-none" data-bs-toggle="modal" data-bs-target="#webcam"
                                 href="#">
-                                <div class="modal-image fit-content mx-auto">
+                                <div class="modal-img fit-content mx-auto">
                                     <img class="img-fluid d-block" th:src="@{/img/portfolio/rc_car/webcam.jpeg}"
                                         alt="Webcam display test on the web controller">
                                 </div>
@@ -213,11 +213,11 @@
 
         <!-- Modals -->
         <div
-            th:include="~{fragments/modal :: modal('rcCar', 'rc_car/rc_car.jpeg', 'Development version of the RC car without the webcam or ultrasonic sensors')}">
+            th:replace="~{fragments/modal :: modal('rcCar', 'rc_car/rc_car.jpeg', 'Development version of the RC car without the webcam or ultrasonic sensors')}">
         </div>
 
         <div
-            th:include="~{fragments/modal :: modal('webcam', 'rc_car/webcam.jpeg', 'Webcam display test on the web controller')}">
+            th:replace="~{fragments/modal :: modal('webcam', 'rc_car/webcam.jpeg', 'Webcam display test on the web controller')}">
         </div>
     </main>
 </body>

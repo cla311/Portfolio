@@ -12,7 +12,7 @@
                         <figure class="figure d-block mx-auto mb-5">
                             <a class="modal-img text-decoration-none" data-bs-toggle="modal" data-bs-target="#logo"
                                 href="#">
-                                <div class="modal-image fit-content mx-auto">
+                                <div class="modal-img fit-content mx-auto">
                                     <img class="img-fluid d-block" th:src="@{/img/portfolio/gameinn/gameinn.png}"
                                         alt="GameInn logo">
                                 </div>
@@ -90,7 +90,7 @@
                         <figure class="figure d-block mx-auto mb-5">
                             <a class="modal-img text-decoration-none" data-bs-toggle="modal" data-bs-target="#clip"
                                 href="#">
-                                <div class="modal-image fit-content mx-auto">
+                                <div class="modal-img fit-content mx-auto">
                                     <img class="img-fluid d-block"
                                         th:src="@{/img/portfolio/gameinn/gameinn_clips_guest.png}"
                                         alt="Guest view homepage, which is the clip list page">
@@ -120,7 +120,7 @@
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#addGroupUI" href="#">
-                                        <div class="modal-image fit-content mx-auto">
+                                        <div class="modal-img fit-content mx-auto">
                                             <img class="img-fluid d-block"
                                                 th:src="@{/img/portfolio/gameinn/gameinn_addGroupUI.png}"
                                                 alt="Add/edit group page in add mode - UI mockup">
@@ -136,7 +136,7 @@
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#addGroup" href="#">
-                                        <div class="modal-image fit-content mx-auto">
+                                        <div class="modal-img fit-content mx-auto">
                                             <img class="img-fluid d-block"
                                                 th:src="@{/img/portfolio/gameinn/gameinn_addGroup_user.png}"
                                                 alt="Add/edit group page in add mode - Regular user view">
@@ -183,7 +183,7 @@
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#editProfile" href="#">
-                                        <div class="modal-image fit-content mx-auto">
+                                        <div class="modal-img fit-content mx-auto">
                                             <img class="img-fluid d-block"
                                                 th:src="@{/img/portfolio/gameinn/gameinn_editProfile.png}"
                                                 alt="Edit profile page - Only accessible when logged in">
@@ -199,7 +199,7 @@
                                 <figure class="figure d-block mx-auto">
                                     <a class="modal-img text-decoration-none" data-bs-toggle="modal"
                                         data-bs-target="#groupFinder" href="#">
-                                        <div class="modal-image fit-content mx-auto">
+                                        <div class="modal-img fit-content mx-auto">
                                             <img class="img-fluid d-block"
                                                 th:src="@{/img/portfolio/gameinn/gameinn_groupFinder.png}"
                                                 alt="Group finder list - Regular user view">
@@ -231,27 +231,27 @@
         </section>
 
         <!-- Modals -->
-        <div th:include="~{fragments/modal :: modal('logo', 'gameinn/gameinn.png', 'GameInn logo')}">
+        <div th:replace="~{fragments/modal :: modal('logo', 'gameinn/gameinn.png', 'GameInn logo')}">
         </div>
 
         <div
-            th:include="~{fragments/modal :: modal('clip', 'gameinn/gameinn_clips_guest.png', 'Guest view homepage, which is the clip list page')}">
+            th:replace="~{fragments/modal :: modal('clip', 'gameinn/gameinn_clips_guest.png', 'Guest view homepage, which is the clip list page')}">
         </div>
 
         <div
-            th:include="~{fragments/modal :: modal('addGroupUI', 'gameinn/gameinn_addGroupUI.png', 'Add/edit group page in add mode - UI mockup')}">
+            th:replace="~{fragments/modal :: modal('addGroupUI', 'gameinn/gameinn_addGroupUI.png', 'Add/edit group page in add mode - UI mockup')}">
         </div>
 
         <div
-            th:include="~{fragments/modal :: modal('addGroup', 'gameinn/gameinn_addGroup_user.png', 'Add/edit group page in add mode - Regular user view')}">
+            th:replace="~{fragments/modal :: modal('addGroup', 'gameinn/gameinn_addGroup_user.png', 'Add/edit group page in add mode - Regular user view')}">
         </div>
 
         <div
-            th:include="~{fragments/modal :: modal('editProfile', 'gameinn/gameinn_editProfile.png', 'Edit profile page - Only accessible when logged in')}">
+            th:replace="~{fragments/modal :: modal('editProfile', 'gameinn/gameinn_editProfile.png', 'Edit profile page - Only accessible when logged in')}">
         </div>
 
         <div
-            th:include="~{fragments/modal :: modal('groupFinder', 'gameinn/gameinn_groupFinder.png', 'Group finder list - Regular user view')}">
+            th:replace="~{fragments/modal :: modal('groupFinder', 'gameinn/gameinn_groupFinder.png', 'Group finder list - Regular user view')}">
         </div>
     </main>
 </body>
