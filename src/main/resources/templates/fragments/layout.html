@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html th:fragment="layout (title, links, content)" xmlns:th="http://www.thymeleaf.org">
+<html th:fragment="layout (title, links, scripts, content)" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
@@ -25,6 +25,7 @@
     <script th:src="@{/js/portfolio.min.js}"></script>
 
     <th:block th:replace="${links} ?: ~{}" />
+    <th:block th:replace="${scripts} ?: ~{}" />
 
 </head>
 
