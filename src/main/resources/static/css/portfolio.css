@@ -223,6 +223,10 @@ a.text-secondary:hover {
     width: 100%;
 }
 
+.carousel-inner.img-thumbnail {
+    border-color: #dee2e6;
+}
+
 .carousel-control-prev,
 .carousel-control-next {
     height: fit-content;
