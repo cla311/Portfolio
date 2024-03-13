@@ -16,7 +16,7 @@
                 <div class="modal-body p-3">
                     <th:block th:replace="${modalContent}">
                         <!-- Still pass in an image and alt text as fallback in case carousel fragment doesn't load -->
-                        <img class="modal-img-full modal-img img-fluid d-block object-fit-scale mx-auto"
+                        <img class="modal-img-full modal-img img-fluid img-thumbnail d-block object-fit-scale mx-auto"
                             th:src="@{|/img/portfolio/${image}|}" th:alt="${alt}">
                     </th:block>
                 </div>
