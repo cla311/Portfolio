@@ -25,34 +25,34 @@
                 </div>
             </a>
 
-            <button class="carousel-control-prev" type="button" th:data-bs-target="'#carouselLimeLite' + ${id}"
-                data-bs-slide="prev">
+            <button class="carousel-control-prev top-50 translate-middle-y" type="button"
+                th:data-bs-target="'#carouselLimeLite' + ${id}" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" th:data-bs-target="'#carouselLimeLite' + ${id}"
-                data-bs-slide="next">
+            <button class="carousel-control-next top-50 translate-middle-y" type="button"
+                th:data-bs-target="'#carouselLimeLite' + ${id}" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
 
-        <div class="carousel-indicators carousel-thumbnails">
+        <div class="carousel-indicators carousel-thumbnails align-items-center mt-3 mb-0">
             <button type="button" th:id="'thumb1' + ${id}" th:data-bs-target="'#carouselLimeLite' + ${id}"
-                data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+                data-bs-slide-to="0" class="bg-transparent active" aria-current="true" aria-label="Slide 1">
                 <img th:src="@{/img/portfolio/bwl/LimeLite.jpg}" class="d-block" alt="LimeLite front view">
             </button>
             <button type="button" th:id="'thumb2' + ${id}" th:data-bs-target="'#carouselLimeLite' + ${id}"
-                data-bs-slide-to="1" aria-label="Slide 2">
+                data-bs-slide-to="1" class="bg-transparent" aria-label="Slide 2">
                 <img th:src="@{/img/portfolio/bwl/LimeLite_2.jpg}" class="d-block"
                     alt="LimeLite three-quarter back view">
             </button>
             <button type="button" th:id="'thumb3' + ${id}" th:data-bs-target="'#carouselLimeLite' + ${id}"
-                data-bs-slide-to="2" aria-label="Slide 3">
+                data-bs-slide-to="2" class="bg-transparent" aria-label="Slide 3">
                 <img th:src="@{/img/portfolio/bwl/LimeLite_3.jpg}" class="d-block" alt="LimeLite back view">
             </button>
             <button type="button" th:id="'thumb4' + ${id}" th:data-bs-target="'#carouselLimeLite' + ${id}"
-                data-bs-slide-to="3" aria-label="Slide 4">
+                data-bs-slide-to="3" class="bg-transparent" aria-label="Slide 4">
                 <img th:src="@{/img/portfolio/bwl/LimeLite_4.jpg}" class="d-block" alt="LimeLite side view">
             </button>
         </div>

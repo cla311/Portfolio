@@ -203,13 +203,14 @@ a.text-secondary:hover {
     max-height: 1200px;
     width: 100%;
     height: 100%;
-    transition: all 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
 }
 
 .portfolio-item:hover img,
-.modal-img:hover img {
-    transition: all 0.25s ease-in-out;
-    opacity: 0.3;
+.modal-img:hover img,
+.carousel-thumbnails [data-bs-target]:not(.active):hover img {
+    transition: opacity 0.25s ease-in-out;
+    opacity: 0.7;
 }
 
 .modal-img-full {
@@ -222,6 +223,11 @@ a.text-secondary:hover {
     width: 100%;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+    height: fit-content;
+}
+
 .carousel-thumbnails {
     position: static;
 }
@@ -230,11 +236,23 @@ a.text-secondary:hover {
     max-width: 70px;
     width: max-content;
     height: max-content;
+    opacity: initial;
+    padding: calc(0.25rem + 1px);
+    border: 0;
+}
+
+.carousel-thumbnails [data-bs-target].active {
+    padding: 0.25rem;
+    border: 1px solid black;
 }
 
 .carousel-thumbnails img {
     max-width: 70px;
     width: 100%;
+}
+
+.carousel-thumbnails [data-bs-target]:not(.active) img {
+    transition: opacity 0.25s ease-in-out;
 }
 
 .fit-content {
