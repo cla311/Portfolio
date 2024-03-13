@@ -1,66 +1,59 @@
 "use strict";
 
-var page = $("html, body");
-
 $(function () {
+  var carouselElementA = $("#carouselLimeLiteA"),
+    carouselElementB = $("#carouselLimeLiteB");
+
+  var carouselA = bootstrap.Carousel.getOrCreateInstance(carouselElementA),
+    carouselB = bootstrap.Carousel.getOrCreateInstance(carouselElementB);
+
   // Carousel A Controls
-  $("#carouselLimeLiteA .carousel-control-prev").on(
-    "click",
-    null,
-    { target: "#carouselLimeLiteB" },
-    carouselPrev
-  );
+  carouselElementA.find("carousel-control-prev").on("click", () => {
+    carouselB.prev();
+  });
 
-  $("#carouselLimeLiteA .carousel-control-next").on(
-    "click",
-    null,
-    { target: "#carouselLimeLiteB" },
-    carouselNext
-  );
+  carouselElementA.find(".carousel-control-next").on("click", () => {
+    carouselB.next();
+  });
 
-  $("#thumb1A").on("click", null, { target: "#thumb1B" }, carouselThumbnail);
+  $("#thumb1A").on("click", () => {
+    carouselB.to(0);
+  });
 
-  $("#thumb2A").on("click", null, { target: "#thumb2B" }, carouselThumbnail);
+  $("#thumb2A").on("click", () => {
+    carouselB.to(1);
+  });
 
-  $("#thumb3A").on("click", null, { target: "#thumb3B" }, carouselThumbnail);
+  $("#thumb3A").on("click", () => {
+    carouselB.to(2);
+  });
 
-  $("#thumb4A").on("click", null, { target: "#thumb4B" }, carouselThumbnail);
+  $("#thumb4A").on("click", () => {
+    carouselB.to(3);
+  });
 
   // Carousel B Controls
-  $("#carouselLimeLiteB .carousel-control-prev").on(
-    "click",
-    null,
-    { target: "#carouselLimeLiteA" },
-    carouselPrev
-  );
+  carouselElementB.find(".carousel-control-prev").on("click", (e) => {
+    carouselA.prev();
+  });
 
-  $("#carouselLimeLiteB .carousel-control-next").on(
-    "click",
-    null,
-    { target: "#carouselLimeLiteA" },
-    carouselNext
-  );
+  carouselElementB.find(".carousel-control-next").on("click", () => {
+    carouselA.next();
+  });
 
-  $("#thumb1B").on("click", null, { target: "#thumb1A" }, carouselThumbnail);
+  $("#thumb1B").on("click", () => {
+    carouselA.to(0);
+  });
 
-  $("#thumb2B").on("click", null, { target: "#thumb2A" }, carouselThumbnail);
+  $("#thumb2B").on("click", () => {
+    carouselA.to(1);
+  });
 
-  $("#thumb3B").on("click", null, { target: "#thumb3A" }, carouselThumbnail);
+  $("#thumb3B").on("click", () => {
+    carouselA.to(2);
+  });
 
-  $("#thumb4B").on("click", null, { target: "#thumb4A" }, carouselThumbnail);
+  $("#thumb4B").on("click", () => {
+    carouselA.to(3);
+  });
 });
-
-function carouselPrev(event) {
-  var carousel = event.data.target;
-  $(`${carousel} .carousel-control-next`).trigger("click");
-}
-
-function carouselNext(event) {
-  var carousel = event.data.target;
-  $(`${carousel} .carousel-control-next`).trigger("click");
-}
-
-function carouselThumbnail(event) {
-  var thumbnail = event.data.target;
-  $(thumbnail).trigger("click");
-}
