@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html th:replace="~{fragments/layout :: layout(~{::title}, ~{::link}, ~{::#content})}">
+<html th:replace="~{fragments/layout :: layout(~{::title}, ~{::link}, ~{::script}, ~{::#content})}">
 
 <head>
     <title th:text="|${project.getTitle()} - Christopher Louie|">Christopher Louie</title>
-    <th:block th:replace="~{@{'fragments/' + ${project.getUrl()}} :: ${project.getUrl()}} + 'Links'" />
+
+    <link rel="stylesheet" th:href="@{|/css/${project.getUrl()}.min.css}|" th:if="${css_file}">
+    <script th:src="@{|/js/${project.getUrl()}.min.js|}" th:if="${js_file}"></script>
 </head>
 
 <body>
