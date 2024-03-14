@@ -39,6 +39,9 @@
                             <p class="lead">
                                 <span class="fw-bold">Tools:</span> C, HTML5, CSS3, JavaScript, jQuery, Node.js
                             </p>
+                            <p class="lead">
+                                <span class="fw-bold">Awards:</span> Student's Choice: Best Project (class-voted award)
+                            </p>
                         </div>
 
                         <div class="mb-5">
@@ -48,12 +51,12 @@
                                 BeagleBone Green using primarily C/C++ that interacts with BeagleBone Green (BBG), Zen
                                 Cape (custom cape created for the class), or external hardware. The system can
                                 additionally interact with an embedded web server or a remote web server/client if
-                                needed. We created a RC car with two modes, manual mode and automatic mode. </p>
+                                needed. We created an RC car with two modes, manual mode and automatic mode. </p>
 
                             <ul class="lead">
                                 <li>
-                                    In manual mode, users can control the robot using an integrated controller web page
-                                    on the robot. Using the front and rear ultrasonic sensors, the RC car is able to
+                                    In manual mode, users can control the robot using an embedded controller web page on
+                                    the robot. Using the front and rear ultrasonic sensors, the RC car is able to
                                     automatically stop when it detects a wall or object in the way.
                                 </li>
                                 <li>
@@ -163,12 +166,16 @@
                                 remaining space we had on the BBG (space had been used for other Linux libraries that we
                                 needed for assignments and the code for the assignments as well). As well, we didn't
                                 have the time to learn how to use some of the more complicated libraries which could
-                                have worked for us. We eventually were able to solve this as a group by using custom C
-                                code we found that generates each frame from the webcam and sends it back to the
-                                frontend. To do this, we modified the code and created a separate server connection just
-                                for the camera, allowing the camera frame data to be separate from the controller
-                                command data. The Node.js server would listen to the camera server for the camera frame
-                                data and then pass it to the frontend to be displayed.
+                                have worked for us.
+                            </p>
+
+                            <p class="lead">
+                                We eventually were able to solve this as a group by using custom C code we found that
+                                generates each frame from the webcam and sends it back to the frontend. To do this, we
+                                modified the code and created a separate server connection just for the camera, allowing
+                                the camera frame data to be separate from the controller command data. The Node.js
+                                server would listen to the camera server for the camera frame data and then pass it to
+                                the frontend to be displayed.
                             </p>
 
                             <p class="lead">
