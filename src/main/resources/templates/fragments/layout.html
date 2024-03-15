@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title th:replace="${title}">Christopher Louie</title>
-    <link rel="icon" type="image/x-icon" th:href="@{/img/favicon.ico}">
+    <link rel="icon" type="image/x-icon" th:href="@{/img/favicon.ico}" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/x-icon" th:href="@{/img/favicon_dark.ico}" media="(prefers-color-scheme: dark)">
 
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
     <script th:src="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"></script>
@@ -81,7 +82,7 @@
     <!-- Copyright Section -->
     <footer class="footer py-4 text-center text-white">
         <div class="container">
-            <small>Copyright &copy; Christopher Louie 2019-<span class="current-year"></span></small>
+            <small>Copyright &copy; Christopher Louie <span class="current-year"></span></small>
         </div>
     </footer>
 
