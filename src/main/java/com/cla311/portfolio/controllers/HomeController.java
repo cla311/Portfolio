@@ -33,7 +33,7 @@ public class HomeController {
 		return "index";
 	}
 
-	@GetMapping("/{project}")
+	@GetMapping("/{project:(?!favicon.ico).+}")
 	public String index(
 			@PathVariable(required = true) String project, Model model) {
 		Resource cssFile = resourceLoader.getResource("classpath:static/css/" + project + ".min.css");
