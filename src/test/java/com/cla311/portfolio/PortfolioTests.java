@@ -12,8 +12,7 @@ public class PortfolioTests {
 	private Portfolio controller;
 
 	@Test
-	public void contextLoads()
-			throws Exception {
+	public void contextLoads() throws Exception {
 		assertThat(controller).isNotNull();
 	}
 }

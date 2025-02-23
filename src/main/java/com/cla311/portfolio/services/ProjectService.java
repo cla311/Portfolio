@@ -27,7 +27,7 @@ public class ProjectService {
 		if (link == null || link.equals("")) {
 			throw new IllegalArgumentException("No project id provided.");
 		}
-		return projectRepository.findById(link).orElseThrow(
-				() -> new IllegalArgumentException("No project with id " + link));
+		return projectRepository.findById(link)
+				.orElseThrow(() -> new IllegalArgumentException("No project with id " + link));
 	}
 }
